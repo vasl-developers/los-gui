@@ -16,15 +16,22 @@
  */
 package VASL.LOSGUI;
 
-import VASL.LOS.LOSDataEditor;
-import VASL.LOS.Map.*;
-import VASL.LOSGUI.Selection.*;
-import VASL.build.module.map.boardArchive.BoardArchive;
-import VASL.build.module.map.boardArchive.SharedBoardMetadata;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.AWTEvent;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.Shape;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
@@ -36,6 +43,26 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
+import javax.swing.JComponent;
+import javax.swing.JOptionPane;
+import javax.swing.Scrollable;
+
+import VASL.LOS.LOSDataEditor;
+import VASL.LOS.Map.Bridge;
+import VASL.LOS.Map.Hex;
+import VASL.LOS.Map.LOSResult;
+import VASL.LOS.Map.Location;
+import VASL.LOS.Map.Map;
+import VASL.LOS.Map.Terrain;
+import VASL.LOSGUI.Selection.BridgeSelection;
+import VASL.LOSGUI.Selection.HexSelection;
+import VASL.LOSGUI.Selection.HexsideSelection;
+import VASL.LOSGUI.Selection.RectangularSelection;
+import VASL.LOSGUI.Selection.RotatedRectangularSelection;
+import VASL.LOSGUI.Selection.Selection;
+import VASL.build.module.map.boardArchive.BoardArchive;
+import VASL.build.module.map.boardArchive.SharedBoardMetadata;
 
 /**
  * Title:        LOSEditorJComponent.java
@@ -97,8 +124,8 @@ public class LOSEditorJComponent
     private int customBridgeRoadElevation = 0;
 
     // road variables
-    private int roadWidth = (int) Hex.WIDTH / 6 + 1;
-    private int roadHeight = (int) Hex.HEIGHT / 2;
+    private int roadWidth = (int) Map.hexWidth / 6 + 1;
+    private int roadHeight = (int) Map.hexWidth / 2;
 
     // selection list
     private LinkedList<Selection> allSelections = new LinkedList<Selection>();
@@ -460,7 +487,8 @@ public class LOSEditorJComponent
 
                 return;
 
-            } else if (currentFunctionName.equals("Set ground level") ||
+            }
+            else if (currentFunctionName.equals("Set ground level") ||
                     currentFunctionName.equals("Add terrain")) {
 
                 // custom building?
@@ -657,6 +685,15 @@ public class LOSEditorJComponent
                     ));
                 }
             }
+            else if(currentFunctionName.equals("Add objects")){
+
+                // mark the hex
+                Hex h = map.gridToHex(e.getX(), e.getY());
+                allSelections.add(new HexSelection(
+                        new Rectangle((int) h.getCenterLocation().getLOSPoint().getX() - 8, (int) h.getCenterLocation().getLOSPoint().getY() - 8, 16, 16),
+                        h
+                ));
+            }
 
             repaint();
         }
@@ -807,6 +844,9 @@ public class LOSEditorJComponent
             terrainString += "/" + targetLocation.getHex().getBridge().getTerrain().getName();
         }
 
+        //stairway?
+        terrainString += " | Stairway: " + targetLocation.getHex().hasStairway();
+
         frame.setStatusBarText(cursorString + locationString + heightString + terrainString);
     }
 
@@ -880,7 +920,7 @@ public class LOSEditorJComponent
         if (losDataEditor == null) {
             return 0;
         } else {
-            return (int) Hex.WIDTH;
+            return (int) Map.hexWidth;
         }
     }
 
@@ -961,7 +1001,13 @@ public class LOSEditorJComponent
                 currentToTerrainName = "Dirt Road";
             }
         }
-
+        else if (newCurrentFunction.equals("Add objects")) {
+            if (!currentFunctionName.equals("Add objects")) {
+                currentFunctionName 	= newCurrentFunction;
+                currentTerrain 		= map.getTerrain("Foxholes");
+                currentTerrainName	= "Foxholes";
+            }
+        }
         repaint();
     }
 
@@ -1095,7 +1141,45 @@ public class LOSEditorJComponent
                 currentTerrain = map.getTerrain("Runway");
             }
         }
+        else if (currentFunctionName.equals("Add objects")) {
 
+            if(currentTerrainName.equals("Foxholes")){
+                currentTerrain = map.getTerrain("Foxholes");
+            }
+            else if(currentTerrainName.equals("Trench")){
+                currentTerrain = map.getTerrain("Trench");
+            }
+            else if(currentTerrainName.equals("Tunnel")){
+                currentTerrain = map.getTerrain("Tunnel");
+            }
+            else if(currentTerrainName.equals("Sewer")){
+                currentTerrain = map.getTerrain("Sewer");
+            }
+            else if(currentTerrainName.equals("Stairway")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Smoke")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Vehicle")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Remove Stairway")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Remove Tunnel/Sewer")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Remove Entrenchment")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Remove Smoke")){
+                currentTerrain = null;
+            }
+            else if(currentTerrainName.equals("Remove Vehicle")){
+                currentTerrain = null;
+            }
+        }
         frame.setStatusBarText("  ");
         repaint();
     }
@@ -1419,8 +1503,33 @@ public class LOSEditorJComponent
             }
         }
 
+        else if (currentFunctionName.equals("Add objects")) {
+
+            if (allSelections.size() > 0) {
+
+                Iterator iter = allSelections.iterator();
+                Hex h = null;
+                while(iter.hasNext()){
+
+                    h = ((HexSelection) iter.next()).getHex();
+
+                    if(currentTerrainName.equals("Stairway")){
+
+                        h.setStairway(true);
+                    }
+                    else if(currentTerrainName.equals("Remove Stairway")){
+
+                        h.setStairway(false);
+                    }
+
+                    // adjust "dirty" area of map
+                    setDirtyArea(h.getExtendedHexBorder().getBounds());
+                    mapChanged = true;
+                }
+            }
+        }
         // rebuild the map
-        losDataEditor.getMap().resetHexTerrain();
+        // losDataEditor.getMap().resetHexTerrain();
         paintMapImage(true);
         clearSelections();
         repaint();
@@ -1758,6 +1867,7 @@ public class LOSEditorJComponent
         }
 
         frame.setStatusBarText("Recreating the map image...");
+        losDataEditor.getMap().resetHexTerrain();
         frame.paintImmediately();
         paintMapImage(false);
         frame.setStatusBarText("");

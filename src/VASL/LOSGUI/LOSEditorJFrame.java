@@ -16,13 +16,40 @@
  */
 package VASL.LOSGUI;
 
+import java.awt.AWTEvent;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
+import javax.swing.event.ChangeEvent;
+
 import VASL.LOS.LOSDataEditor;
 import VASL.LOS.Map.Map;
-
-import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import java.awt.*;
-import java.awt.event.*;
 
 /**
  * Title:        LOSEditorJFrame.java
@@ -1263,21 +1290,13 @@ public class LOSEditorJFrame extends JFrame {
 
     void toArrowButton_actionPerformed() {
 
-        int response = this.AskYesNo(
-                "Are you sure you want to convert all " +
-                        terrainComboBox.getSelectedItem() + " terrain to " +
-                        toTerrainComboBox.getSelectedItem() + "?");
-
-        if (response == JOptionPane.YES_OPTION) {
-
-            losEditorJComponent.changeAllTerrain();
-        }
+       losEditorJComponent.changeAllTerrain();
     }
 
     void testButton() {
 
-        // losEditorJComponent.runLosTest();
-        losEditorJComponent.runSingleLOS();
+        losEditorJComponent.runLosTest();
+        // losEditorJComponent.runSingleLOS();
     }
 }
 
