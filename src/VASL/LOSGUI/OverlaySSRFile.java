@@ -112,8 +112,18 @@ public class OverlaySSRFile {
         System.out.println("</overlaySSRules>");
     }
 
-    public static void main(String args[]) {
 
+	/**
+	 * Will extract the information in the archive OverlaySSRFile and print the XML needed in
+	 * the BoardMetadata.xml file
+	 * @param args
+	 */
+	public static void main(String args[]) {
+
+		if (args.length != 1) {
+			System.out.println("Usage: java VASL.LOSGUI.OverlaySSRFile <board archive>");
+			System.exit(0);
+		}
         try {
 
             ZipFile archive = new ZipFile(args[0]);

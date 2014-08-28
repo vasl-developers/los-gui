@@ -696,7 +696,7 @@ public class LOSEditorJFrame extends JFrame {
 
                 // make the map the active component
                 losEditorJComponent.requestFocus();
-                this.setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
+                setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
 
             }
         }
@@ -727,7 +727,7 @@ public class LOSEditorJFrame extends JFrame {
 
             // make the map the active component
             losEditorJComponent.requestFocus();
-            this.setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
+            setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
         }
     }
 
@@ -891,7 +891,7 @@ public class LOSEditorJFrame extends JFrame {
         // abort if user chooses not to close the current map
         if (!closeMap()) return;
 
-        losEditorJComponent.createNewMap(width, height);
+        losEditorJComponent.createNewMap();
 
         // enable menus/buttons
         saveButton.setEnabled(true);
