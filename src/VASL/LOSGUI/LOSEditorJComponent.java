@@ -45,10 +45,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 import javax.swing.JComponent;
-import javax.swing.JOptionPane;
 import javax.swing.Scrollable;
 
-import VASL.LOS.LOSDataEditor;
+import VASL.LOS.GUILOSDataEditor;
 import VASL.LOS.Map.Bridge;
 import VASL.LOS.Map.Hex;
 import VASL.LOS.Map.LOSResult;
@@ -83,7 +82,7 @@ public class LOSEditorJComponent
     private boolean mapOpen;
 
     // the map editor
-    public LOSDataEditor losDataEditor;
+    public GUILOSDataEditor losDataEditor;
     public BufferedImage mapImage;
     private int minDirtyX = -1;
     private int minDirtyY = -1;
@@ -123,9 +122,6 @@ public class LOSEditorJComponent
     private Bridge currentBridge;
     private int customBridgeRoadElevation;
 
-    // road variables
-//    private int roadWidth = (int) Map.hexWidth / 6 + 1;
-//    private int roadHeight = (int) Map.hexWidth / 2;
 	private int roadWidth;
 	private int roadHeight;
 
@@ -335,7 +331,12 @@ public class LOSEditorJComponent
         // paint the map
         final Graphics2D screen2D = (Graphics2D) g;
         if (VASLImage) {
-            screen2D.drawImage(losDataEditor.getBoardImage(), 0, 0, this);
+            //losDataEditor.paintMapShadows(0,0,i.getWidth(), i.getHeight(), i);
+            BufferedImage i = new BufferedImage(losDataEditor.getMap().getGridWidth(), losDataEditor.getMap().getGridHeight(), BufferedImage.TYPE_3BYTE_BGR);
+            i.getGraphics().drawImage(losDataEditor.getBoardImage(), 0, 0, null);
+//            losDataEditor.paintMapShadows(0,0,i.getWidth(),i.getHeight(),i);
+            screen2D.drawImage(i, 0, 0, this);
+
         }
         else {
             screen2D.drawImage(mapImage, 0, 0, this);
@@ -518,7 +519,7 @@ public class LOSEditorJComponent
                     final Hex h = losDataEditor.getMap().gridToHex(e.getX(), e.getY());
 
                     // mark the hex
-                    allSelections.add(new HexSelection(h.getExtendedHexBorder(), h));
+                    allSelections.add(new HexSelection(h));
 
                 } else {
                     final int currentX = e.getX() - currentBrushSize / 2;
@@ -559,7 +560,7 @@ public class LOSEditorJComponent
                 final Hex hex = sourceLocation.getHex();
 
                 //ignore the center location
-                if (hex.isHexsideLocation(sourceLocation)) {
+                if (!hex.isCenterLocation(sourceLocation)) {
 
                     // create a hexside rectangles
                     final Rectangle paintRect = new Rectangle(
@@ -608,10 +609,7 @@ public class LOSEditorJComponent
                 // remove?
                 if (currentTerrain == null) {
 
-                    allSelections.add(new HexSelection(
-                            new Rectangle((int) h.getCenterLocation().getLOSPoint().getX() - 8, (int) h.getCenterLocation().getLOSPoint().getY() - 8, 16, 16),
-                            h
-                    ));
+                    allSelections.add(new HexSelection(h));
                 } else {
                     allSelections.add(new BridgeSelection(new Bridge(
                             currentBridge.getTerrain(),
@@ -635,7 +633,7 @@ public class LOSEditorJComponent
                     return;
 
                 //ignore the center location
-                if (hex.isHexsideLocation(sourceLocation)) {
+                if (!hex.isCenterLocation(sourceLocation)) {
 
                     // create the road rectangle
                     final int roadOffset = 4;
@@ -691,10 +689,7 @@ public class LOSEditorJComponent
 
                 // mark the hex
                 final Hex h = map.gridToHex(e.getX(), e.getY());
-                allSelections.add(new HexSelection(
-                        new Rectangle((int) h.getCenterLocation().getLOSPoint().getX() - 8, (int) h.getCenterLocation().getLOSPoint().getY() - 8, 16, 16),
-                        h
-                ));
+                allSelections.add(new HexSelection(h));
             }
 
             repaint();
@@ -706,10 +701,8 @@ public class LOSEditorJComponent
         if ("LOS".equals(currentFunctionName)) {
 
             sourceLocation = losDataEditor.getMap().gridToHex(e.getX(), e.getY()).getNearestLocation(e.getX(), e.getY());
-            useAuxSourceLOSPoint = sourceLocation.auxLOSPointIsCloser(e.getX(), e.getY());
-
-            sourceX = useAuxSourceLOSPoint ? sourceLocation.getAuxLOSPoint().x : sourceLocation.getLOSPoint().x;
-            sourceY = useAuxSourceLOSPoint ? sourceLocation.getAuxLOSPoint().y : sourceLocation.getLOSPoint().y;
+            sourceX = sourceLocation.getLOSPoint().x;
+            sourceY = sourceLocation.getLOSPoint().y;
 
             // if Ctrl click, use upper-most location
             if (e.isControlDown()) {
@@ -922,7 +915,7 @@ public class LOSEditorJComponent
         if (losDataEditor == null) {
             return 0;
         } else {
-            return (int) losDataEditor.getMap().getHexWidth();
+            return (int) losDataEditor.getMap().getHeight();
         }
     }
 
@@ -1081,7 +1074,9 @@ public class LOSEditorJComponent
                 currentTerrain = map.getTerrain("Wadi");
                 currentGroundLevel = -1;
             }
-        } else if ("Add hexside terrain".equals(currentFunctionName)) {
+        }
+
+        else if ("Add hexside terrain".equals(currentFunctionName)) {
 
             final Terrain t = map.getTerrain(currentTerrainName);
 
@@ -1366,18 +1361,17 @@ public class LOSEditorJComponent
                 selectedHexside = (HexsideSelection) allSelection;
                 hex = selectedHexside.getLocation().getHex();
 
-                // set the edge terrain in the location hex
+                // set the hexside terrain in the location hex
                 hexside = hex.getLocationHexside(selectedHexside.getLocation());
                 hex.setHexsideTerrain(hexside, currentTerrain);
 
-                // set the edge terrain in the adjacent hex
+                // set the hexside terrain in the adjacent hex
                 hex = losDataEditor.getMap().getAdjacentHex(hex, hexside);
                 if (hex != null) {
                     hex.setHexsideTerrain(hex.getOppositeHexside(hexside), currentTerrain);
                 }
 
-                // set the grid map
-                // use open ground when removing terrain
+                // set the grid map - use open ground when removing terrain
                 if (currentTerrain == null) {
                     losDataEditor.setGridTerrain(selectedHexside.getUpdateShape(), losDataEditor.getMap().getTerrain("Open Ground"));
                 } else {
@@ -1532,7 +1526,7 @@ public class LOSEditorJComponent
         }
         // rebuild the map
         // losDataEditor.getMap().resetHexTerrain();
-        paintMapImage(true);
+        paintMapImage();
         clearSelections();
         repaint();
     }
@@ -1561,7 +1555,6 @@ public class LOSEditorJComponent
     public void createNewMap() {
 
         // create the map
-        // losDataEditor.createNewLOSData(width, height);
         frame.setStatusBarText("This option is not currently supported. Open an existing board. ");
         frame.paintImmediately();
     }
@@ -1583,7 +1576,7 @@ public class LOSEditorJComponent
         frame.setStatusBarText("Creating the map image...");
         frame.paintImmediately();
         mapImage = new BufferedImage(losDataEditor.getMap().getGridWidth(), losDataEditor.getMap().getGridHeight(), BufferedImage.TYPE_3BYTE_BGR);
-        paintMapImage(false);
+        paintMapImage();
         frame.setStatusBarText("  ");
         adjustMapViewSize();
         mapOpen = true;
@@ -1601,7 +1594,7 @@ public class LOSEditorJComponent
     public void openArchive(String archiveName) {
 
         try {
-            losDataEditor = new LOSDataEditor(
+            losDataEditor = new GUILOSDataEditor(
                     archiveName,
                     LOSEditorProperties.getBoardDirectory(),
                     sharedBoardMetadata);
@@ -1722,57 +1715,14 @@ public class LOSEditorJComponent
         }
     }
 
-    public void paintMapImage(boolean askToPaint) {
+    public void paintMapImage() {
 
         final Map map = losDataEditor.getMap();
-
-        // map not dirty? ask if we should paint the whole thing
-        if (minDirtyX == -1) {
-
-            if (askToPaint) {
-
-                final int response = frame.AskYesNo("Do you want to recreate the entire map image?");
-
-                if (response == JOptionPane.YES_OPTION) {
-
-                    losDataEditor.paintMapArea(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage, terrainImages, singleHexWoodenBridgeImage, singleHexStoneBridgeImage);
-                    losDataEditor.paintMapShadows(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
-                    losDataEditor.paintMapContours(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
-                } else if (response == JOptionPane.NO_OPTION || response == JOptionPane.CANCEL_OPTION) {
-                    return;
-                }
-			} else {
-                losDataEditor.paintMapArea(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage, terrainImages, singleHexWoodenBridgeImage, singleHexStoneBridgeImage);
-                losDataEditor.paintMapShadows(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
-                losDataEditor.paintMapContours(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
-            }
-        } else {
-            losDataEditor.paintMapArea(
-                    minDirtyX,
-                    minDirtyY,
-                    maxDirtyX - minDirtyX + 1,
-                    maxDirtyY - minDirtyY + 1,
-                    mapImage,
-                    terrainImages,
-                    singleHexWoodenBridgeImage,
-                    singleHexStoneBridgeImage
-            );
-            losDataEditor.paintMapShadows(
-                    minDirtyX,
-                    minDirtyY,
-                    maxDirtyX - minDirtyX + 1,
-                    maxDirtyY - minDirtyY + 1,
-                    mapImage
-            );
-            losDataEditor.paintMapContours(
-                    minDirtyX,
-                    minDirtyY,
-                    maxDirtyX - minDirtyX + 1,
-                    maxDirtyY - minDirtyY + 1,
-                    mapImage
-            );
-        }
+        losDataEditor.paintMapArea(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage, terrainImages, singleHexWoodenBridgeImage, singleHexStoneBridgeImage);
+        losDataEditor.paintMapShadows(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
+        losDataEditor.paintMapContours(0, 0, map.getGridWidth(), map.getGridHeight(), mapImage);
         losDataEditor.paintMapHexes(mapImage);
+        losDataEditor.paintAncillaryHexTerrain(mapImage);
     }
 
     // adjust "dirty" area of map
@@ -1868,7 +1818,7 @@ public class LOSEditorJComponent
         frame.setStatusBarText("Recreating the map image...");
         losDataEditor.getMap().resetHexTerrain();
         frame.paintImmediately();
-        paintMapImage(false);
+        paintMapImage();
         frame.setStatusBarText("");
         repaint();
     }
@@ -1935,7 +1885,7 @@ public class LOSEditorJComponent
         losDataEditor.flip();
         frame.setStatusBarText("Rebuilding the map image...");
         frame.paintImmediately();
-        paintMapImage(false);
+        paintMapImage();
         mapChanged = true;
         frame.setStatusBarText("");
     }
@@ -1949,7 +1899,7 @@ public class LOSEditorJComponent
 
         final LOSResult result = new LOSResult();
         result.reset();
-        map.LOS(map.getHex("K4").getCenterLocation(), false, map.getHex("G2").getCenterLocation(), false, result, null);
+        map.LOS(map.getHex("O2").getCenterLocation(), false, map.getHex("D1").getCenterLocation(), false, result, null);
 
     }
 
@@ -2018,7 +1968,7 @@ public class LOSEditorJComponent
             frame.setStatusBarText("Rebuilding the map image...");
             frame.paintImmediately();
 
-            paintMapImage(false);
+            paintMapImage();
             mapChanged = true;
             frame.setStatusBarText("");
         }

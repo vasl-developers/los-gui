@@ -29,27 +29,14 @@ import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
+import java.util.*;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.JToggleButton;
-import javax.swing.JToolBar;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 
-import VASL.LOS.LOSDataEditor;
+import VASL.LOS.GUILOSDataEditor;
 import VASL.LOS.Map.Map;
+import VASSAL.build.module.map.LayeredPieceCollection;
 
 /**
  * Title:        LOSEditorJFrame.java
@@ -78,7 +65,6 @@ public class LOSEditorJFrame extends JFrame {
     private JMenuItem menuHelpAbout = new JMenuItem();
     private JMenuItem menuFileClose = new JMenuItem();
     private JMenuItem menuFileOpen = new JMenuItem();
-    private JMenuItem menuFileNew = new JMenuItem();
     private JMenuItem menuFileSave = new JMenuItem();
     private JMenuItem menuFilePrint = new JMenuItem();
 
@@ -119,6 +105,9 @@ public class LOSEditorJFrame extends JFrame {
     private JComboBox toTerrainComboBox = new JComboBox();
     private JLabel spacer5 = new JLabel();
     private JButton testButton = new JButton();
+
+    // sorted list of all terrain types
+    List<String> terrainList = new ArrayList<String>(256);
 
     //Construct the frame
     public LOSEditorJFrame() {
@@ -195,19 +184,6 @@ public class LOSEditorJFrame extends JFrame {
         openButton.setPreferredSize(new Dimension(25, 25));
         openButton.setRequestFocusEnabled(false);
         openButton.setToolTipText("Open board");
-        newButton.setMargin(new Insets(2, 2, 2, 2));
-        newButton.addActionListener(new java.awt.event.ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                newMap();
-            }
-        });
-        newButton.setMaximumSize(new Dimension(25, 25));
-        newButton.setMinimumSize(new Dimension(25, 25));
-        newButton.setPreferredSize(new Dimension(25, 25));
-        newButton.setRequestFocusEnabled(false);
-        newButton.setToolTipText("New LOS data");
-        newButton.setIcon(new ImageIcon(losEditorJComponent.getImage("CASL/images/newFile.gif")));
         toolBar.setAlignmentY((float) 0.5);
         toolBar.setFloatable(false);
         losEditorJComponent.setMinimumSize(new Dimension(100, 100));
@@ -254,15 +230,6 @@ public class LOSEditorJFrame extends JFrame {
 
             public void actionPerformed(ActionEvent e) {
                 openArchive();
-            }
-        });
-        menuFileNew.setPreferredSize(new Dimension(100, 20));
-        menuFileNew.setMnemonic('1');
-        menuFileNew.setText("New...");
-        menuFileNew.addActionListener(new java.awt.event.ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                newMap();
             }
         });
         menuFileSave.setPreferredSize(new Dimension(100, 20));
@@ -498,7 +465,6 @@ public class LOSEditorJFrame extends JFrame {
         });
         testButton.setMargin(new Insets(2, 2, 2, 2));
 
-        menuFile.add(menuFileNew);
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileClose);
         menuFile.addSeparator();
@@ -517,7 +483,6 @@ public class LOSEditorJFrame extends JFrame {
         this.getContentPane().add(statusBar, BorderLayout.SOUTH);
         this.getContentPane().add(buttonBar, BorderLayout.NORTH);
         buttonBar.add(toolBar, null);
-        toolBar.add(newButton);
         toolBar.add(openButton);
         toolBar.add(saveButton, null);
         toolBar.add(updateMapButton, null);
@@ -600,25 +565,6 @@ public class LOSEditorJFrame extends JFrame {
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
             fileExit();
         }
-    }
-
-    void newMap() {
-
-        showNewMapDialog();
-    }
-
-    public void showNewMapDialog() {
-
-        NewMapDialog dialog = new NewMapDialog(this, "Create a new map", true);
-
-        //Center the dialog box
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Dimension frameSize = dialog.getSize();
-        if (frameSize.height > screenSize.height) frameSize.height = screenSize.height;
-        if (frameSize.width > screenSize.width) frameSize.width = screenSize.width;
-        dialog.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
-        dialog.setVisible(true);
-
     }
 
     public void showBridgeDialog(){
@@ -715,6 +661,13 @@ public class LOSEditorJFrame extends JFrame {
             return;
         }
 
+        // sort terrain names
+        for (String terrain: losEditorJComponent.losDataEditor.getTerrainNames().keySet()) {
+
+            terrainList.add(terrain);
+        }
+        Collections.sort(terrainList);
+
         // enable menus/buttons
         if (losEditorJComponent.isMapOpen()) {
             saveButton.setEnabled(true);
@@ -751,7 +704,7 @@ public class LOSEditorJFrame extends JFrame {
             try {
                 setStatusBarText("Opening map...");
                 //TODO: won't work - need to get the shared metadata
-                LOSDataEditor tempMap = new LOSDataEditor(fileName, LOSEditorProperties.getBoardDirectory(), null);
+                GUILOSDataEditor tempMap = new GUILOSDataEditor(fileName, LOSEditorProperties.getBoardDirectory(), null);
 
                 // show the dialog
                 InsertMapDialog dialog = new InsertMapDialog(this, "Insert a map", true, tempMap);
@@ -1024,30 +977,21 @@ public class LOSEditorJFrame extends JFrame {
             undoFunctionButton.setEnabled(true);
             testButton.setEnabled(true);
 
-            // losEditorJComponent
+            // add all hexside terrain names to the terrain pull-downs
+            for (String terrain : terrainList) {
 
-            terrainComboBox.addItem("Wall");
-            terrainComboBox.addItem("Road Block");
-            terrainComboBox.addItem("Hedge");
-            terrainComboBox.addItem("Bocage");
-            terrainComboBox.addItem("Cliff");
-            terrainComboBox.addItem("Rowhouse Wall");
+                if(losEditorJComponent.losDataEditor.getMap().getTerrain(terrain).isHexsideTerrain()) {
 
-            terrainComboBox.addItem("Panji");
-            terrainComboBox.addItem("Rice Paddy Bank");
-            terrainComboBox.addItem("Remove");
-
-            toTerrainComboBox.addItem("Wall");
-            toTerrainComboBox.addItem("Road Block");
-            toTerrainComboBox.addItem("Hedge");
-            toTerrainComboBox.addItem("Bocage");
-            toTerrainComboBox.addItem("Cliff");
-            toTerrainComboBox.addItem("Rowhouse Wall");
-            toTerrainComboBox.addItem("Panji");
-            toTerrainComboBox.addItem("Rice Paddy Bank");
+                    terrainComboBox.addItem(terrain);
+                    toTerrainComboBox.addItem(terrain);
+                }
+            }
 
             // setup the map editor
             losEditorJComponent.setCurrentTerrain("Wall");
+            toTerrainComboBox.setSelectedItem("Wall");
+            terrainComboBox.setSelectedItem("Wall");
+
         } else if (newFunction.equals("Add terrain")) {
 
             // set widgets
@@ -1061,133 +1005,18 @@ public class LOSEditorJFrame extends JFrame {
             undoFunctionButton.setEnabled(true);
             testButton.setEnabled(true);
 
-            terrainComboBox.addItem("Open Ground");
-            terrainComboBox.addItem("Plowed Field");
-            terrainComboBox.addItem("Snow");
-            terrainComboBox.addItem("Deep Snow");
-            terrainComboBox.addItem("Ice");
-            terrainComboBox.addItem("Mud");
-            terrainComboBox.addItem("Mudflats");
-            terrainComboBox.addItem("Water");
-            terrainComboBox.addItem("Shallow Water");
-            terrainComboBox.addItem("River");
-            terrainComboBox.addItem("Shallow River");
-            terrainComboBox.addItem("Ford");
-            terrainComboBox.addItem("Canal");
-            terrainComboBox.addItem("Marsh");
-            terrainComboBox.addItem("Dirt Road");
-            terrainComboBox.addItem("Paved Road");
-            terrainComboBox.addItem("Runway");
-            terrainComboBox.addItem("Path");
-            terrainComboBox.addItem("Shellholes");
+            // add all terrain names to the terrain pull-downs
+            for (String terrain : terrainList) {
 
-            terrainComboBox.addItem("Grain");
-            terrainComboBox.addItem("Brush");
-            terrainComboBox.addItem("Crags");
-            terrainComboBox.addItem("Debris");
-            terrainComboBox.addItem("Graveyard");
-            terrainComboBox.addItem("Woods");
-            terrainComboBox.addItem("Forest");
-            terrainComboBox.addItem("Pine Woods");
-            terrainComboBox.addItem("Orchard");
-            terrainComboBox.addItem("Orchard, Out of Season");
-            terrainComboBox.addItem("Lumberyard");
-            terrainComboBox.addItem("Wooden Rubble");
-            terrainComboBox.addItem("Wooden Building");
-            terrainComboBox.addItem("Wooden Building, 1 Level");
-            terrainComboBox.addItem("Wooden Building, 2 Level");
-            terrainComboBox.addItem("Wooden Building, 3 Level");
-            terrainComboBox.addItem("Wooden Building, 4 Level");
-            terrainComboBox.addItem("Wooden Factory, 1.5 Level");
-            terrainComboBox.addItem("Wooden Factory, 2.5 Level");
-            terrainComboBox.addItem("Wooden Market Place");
-            terrainComboBox.addItem("Stone Rubble");
-            terrainComboBox.addItem("Stone Building");
-            terrainComboBox.addItem("Stone Building, 1 Level");
-            terrainComboBox.addItem("Stone Building, 2 Level");
-            terrainComboBox.addItem("Stone Building, 3 Level");
-            terrainComboBox.addItem("Stone Building, 4 Level");
-            terrainComboBox.addItem("Stone Factory, 1.5 Level");
-            terrainComboBox.addItem("Stone Factory, 2.5 Level");
-            terrainComboBox.addItem("Stone Market Place");
-
-            terrainComboBox.addItem("Temple");
-            terrainComboBox.addItem("Light Jungle");
-            terrainComboBox.addItem("Dense Jungle");
-            terrainComboBox.addItem("Bamboo");
-            terrainComboBox.addItem("Palm Trees");
-            terrainComboBox.addItem("Huts");
-            terrainComboBox.addItem("Collapsed Huts");
-            terrainComboBox.addItem("Kunai");
-            terrainComboBox.addItem("Swamp");
-            terrainComboBox.addItem("Rice Paddy, Drained");
-            terrainComboBox.addItem("Rice Paddy, Irrigated");
-            terrainComboBox.addItem("Rice Paddy, In Season");
-
-            toTerrainComboBox.addItem("Open Ground");
-            toTerrainComboBox.addItem("Plowed Field");
-            toTerrainComboBox.addItem("Snow");
-            toTerrainComboBox.addItem("Deep Snow");
-            toTerrainComboBox.addItem("Ice");
-            toTerrainComboBox.addItem("Mud");
-            toTerrainComboBox.addItem("Mudflats");
-            toTerrainComboBox.addItem("Water");
-            toTerrainComboBox.addItem("Shallow Water");
-            toTerrainComboBox.addItem("River");
-            toTerrainComboBox.addItem("Shallow River");
-            toTerrainComboBox.addItem("Ford");
-            toTerrainComboBox.addItem("Canal");
-            toTerrainComboBox.addItem("Marsh");
-            toTerrainComboBox.addItem("Dirt Road");
-            toTerrainComboBox.addItem("Paved Road");
-            toTerrainComboBox.addItem("Runway");
-            toTerrainComboBox.addItem("Path");
-            toTerrainComboBox.addItem("Shellholes");
-
-            toTerrainComboBox.addItem("Grain");
-            toTerrainComboBox.addItem("Brush");
-            toTerrainComboBox.addItem("Crags");
-            toTerrainComboBox.addItem("Debris");
-            toTerrainComboBox.addItem("Graveyard");
-            toTerrainComboBox.addItem("Woods");
-            toTerrainComboBox.addItem("Forest");
-            toTerrainComboBox.addItem("Pine Woods");
-            toTerrainComboBox.addItem("Orchard");
-            toTerrainComboBox.addItem("Orchard, Out of Season");
-            toTerrainComboBox.addItem("Lumberyard");
-            toTerrainComboBox.addItem("Wooden Rubble");
-            toTerrainComboBox.addItem("Wooden Building");
-            toTerrainComboBox.addItem("Wooden Building, 1 Level");
-            toTerrainComboBox.addItem("Wooden Building, 2 Level");
-            toTerrainComboBox.addItem("Wooden Building, 3 Level");
-            toTerrainComboBox.addItem("Wooden Building, 4 Level");
-            toTerrainComboBox.addItem("Wooden Factory, 1.5 Level");
-            toTerrainComboBox.addItem("Wooden Factory, 2.5 Level");
-            toTerrainComboBox.addItem("Wooden Market Place");
-            toTerrainComboBox.addItem("Stone Rubble");
-            toTerrainComboBox.addItem("Stone Building");
-            toTerrainComboBox.addItem("Stone Building, 1 Level");
-            toTerrainComboBox.addItem("Stone Building, 2 Level");
-            toTerrainComboBox.addItem("Stone Building, 3 Level");
-            toTerrainComboBox.addItem("Stone Building, 4 Level");
-            toTerrainComboBox.addItem("Stone Factory, 1.5 Level");
-            toTerrainComboBox.addItem("Stone Factory, 2.5 Level");
-            toTerrainComboBox.addItem("Stone Market Place");
-            toTerrainComboBox.addItem("Temple");
-            toTerrainComboBox.addItem("Light Jungle");
-            toTerrainComboBox.addItem("Dense Jungle");
-            toTerrainComboBox.addItem("Bamboo");
-            toTerrainComboBox.addItem("Palm Trees");
-            toTerrainComboBox.addItem("Huts");
-            toTerrainComboBox.addItem("Collapsed Huts");
-            toTerrainComboBox.addItem("Kunai");
-            toTerrainComboBox.addItem("Swamp");
-            toTerrainComboBox.addItem("Rice Paddy, Drained");
-            toTerrainComboBox.addItem("Rice Paddy, Irrigated");
-            toTerrainComboBox.addItem("Rice Paddy, In Season");
+                terrainComboBox.addItem(terrain);
+                toTerrainComboBox.addItem(terrain);
+            }
 
             // setup the map editor
             losEditorJComponent.setCurrentTerrain("Open Ground");
+            terrainComboBox.setSelectedItem("Open Ground");
+            toTerrainComboBox.setSelectedItem("Open Ground");
+
         } else if (newFunction.equals("Add bridge")) {
 
             // set widgets
@@ -1295,8 +1124,8 @@ public class LOSEditorJFrame extends JFrame {
 
     void testButton() {
 
-        losEditorJComponent.runLosTest();
-        // losEditorJComponent.runSingleLOS();
+        // losEditorJComponent.runLosTest();
+        losEditorJComponent.runSingleLOS();
     }
 }
 

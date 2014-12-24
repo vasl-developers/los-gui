@@ -98,7 +98,7 @@ public class OverlaySSRFile {
      */
     public void printAsXML(){
 
-        System.out.println("<overlaySSRules>");
+        System.out.println("\t<overlaySSRules>");
         for (String rule: underlayRules.keySet()) {
 
             underlayRules.get(rule).printAsXML();
@@ -109,7 +109,7 @@ public class OverlaySSRFile {
             overlayRules.get(rule).printAsXML();
 
         }
-        System.out.println("</overlaySSRules>");
+        System.out.println("\t</overlaySSRules>");
     }
 
 
@@ -157,7 +157,7 @@ public class OverlaySSRFile {
         void printAsXML() {
 
             System.out.println(
-                    "\t<overlaySSRule name=\"" + name +
+                    "\t\t<overlaySSRule name=\"" + name +
                             "\" image=\"" + imageName +
                             "\" x=\"" + x +
                             "\" y=\"" + y +
@@ -207,7 +207,7 @@ public class OverlaySSRFile {
         public void printAsXML() {
 
             System.out.println(
-                    "\t<underlaySSRule name=\"" + name +
+                    "\t\t<underlaySSRule name=\"" + name +
                             "\" image=\"" + imageName +
                             "\">"
             );
@@ -215,11 +215,11 @@ public class OverlaySSRFile {
             for(String color: colors) {
 
                 System.out.println(
-                        "\t\t<color name=\"" + color + "\" />"
+                        "\t\t\t<color name=\"" + color + "\" />"
                 );
 
             }
-            System.out.println("\t</underlaySSRule>");
+            System.out.println("\t\t</underlaySSRule>");
         }
     }
 }

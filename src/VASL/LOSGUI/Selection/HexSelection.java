@@ -31,15 +31,11 @@ import java.awt.*;
 public class HexSelection
         extends Selection {
 
-    // private variables
-    private Shape paintShape;
-    @SuppressWarnings("unused")
-    private Shape updateShape;
     private Hex hex;
 
     // getters and setters
     public Shape getUpdateShape() {
-        return paintShape;
+        return hex.getHexBorder();
     }
 
     public Hex getHex() {
@@ -47,9 +43,8 @@ public class HexSelection
     }
 
     // constructor
-    public HexSelection(Shape paintShape, Hex h) {
+    public HexSelection(Hex h) {
 
-        this.paintShape = paintShape;
         hex = h;
     }
 
@@ -57,24 +52,7 @@ public class HexSelection
     public void paint(Graphics2D g) {
 
         g.setColor(paintColor);
-        g.fill(paintShape);
-    }
-    public String getTerrainXMLSnippet(Terrain terrain) {
-
-        return
-                "<terrainEdit type=\"Hex\" " +
-                        "hexName=\"" + hex.getName() + "\" " +
-                        "terrainType=\"" + terrain.getName() + "\" " +
-                        "/>";
-    }
-
-    public String getElevationXMLSnippet(int elevation) {
-
-        return
-                "<elevationEdit type=\"Hex\" " +
-                        "hexName=\"" + hex.getName() + "\" " +
-                        "elevation=\"" + elevation + "\" " +
-                        "/>";
+        g.fill(hex.getHexBorder());
     }
 }
 
