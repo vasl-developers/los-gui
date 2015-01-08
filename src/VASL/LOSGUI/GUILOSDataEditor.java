@@ -443,7 +443,7 @@ public class GUILOSDataEditor extends LOSDataEditor {
 
         HashMap<String, String> terrainNames = new HashMap<String, String>(boardArchive.getTerrainTypes().size());
 
-        for (String key : boardArchive.getTerrainTypes().keySet()) {
+        for (String key : sharedBoardMetadata.getTerrainTypes().keySet()) {
 
             terrainNames.put(key, boardArchive.getTerrainTypes().get(key).getLOSCategory().toString());
         }
