@@ -36,7 +36,6 @@ import javax.swing.event.ChangeEvent;
 
 import VASL.LOS.GUILOSDataEditor;
 import VASL.LOS.Map.Map;
-import VASSAL.build.module.map.LayeredPieceCollection;
 
 /**
  * Title:        LOSEditorJFrame.java
@@ -176,7 +175,7 @@ public class LOSEditorJFrame extends JFrame {
         openButton.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                openArchive();
+                openMap();
             }
         });
         openButton.setMaximumSize(new Dimension(25, 25));
@@ -229,7 +228,7 @@ public class LOSEditorJFrame extends JFrame {
         menuFileOpen.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                openArchive();
+                openMap();
             }
         });
         menuFileSave.setPreferredSize(new Dimension(100, 20));
@@ -617,7 +616,10 @@ public class LOSEditorJFrame extends JFrame {
         return  true;
     }
 
-    public void openArchive(){
+    /**
+     * Open map via file chooser
+     */
+    public void openMap() {
 
         // show the file chooser
         JFileChooser fileChooser = new JFileChooser(LOSEditorProperties.getBoardDirectory());
@@ -625,33 +627,19 @@ public class LOSEditorJFrame extends JFrame {
 
         if (selected == JFileChooser.APPROVE_OPTION) {
 
-            // abort if user chooses not to close the current map
-            if (!closeArchive()) return;
-
-            losEditorJComponent.openArchive(fileChooser.getSelectedFile().getName());
-
-            // enable menus/buttons
-            if (losEditorJComponent.isMapOpen()) {
-                saveButton.setEnabled(true);
-                menuFileClose.setEnabled(true);
-                menuFileSave.setEnabled(true);
-                menuEdit.setEnabled(true);
-
-                // set function
-                setFunction("LOS");
-
-                // make the map the active component
-                losEditorJComponent.requestFocus();
-                setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
-
-            }
+            openMap(fileChooser.getSelectedFile().getName());
         }
     }
 
-    public void openMap(String mapName) {
+    /**
+     * Open given map
+     * @param mapName the map name
+     */
+    public void openMap(String mapName){
 
-        // this is all redundant code
-        // trap errors
+        // abort if user chooses not to close the current map
+        if (!closeArchive()) return;
+
         try {
             losEditorJComponent.openArchive(mapName);
         } catch (Exception e) {
@@ -680,7 +668,8 @@ public class LOSEditorJFrame extends JFrame {
 
             // make the map the active component
             losEditorJComponent.requestFocus();
-            setTitle("LOSEditorApp - " + losEditorJComponent.getArchiveName());
+            setTitle("LOSEditorApp - " + mapName);
+
         }
     }
 

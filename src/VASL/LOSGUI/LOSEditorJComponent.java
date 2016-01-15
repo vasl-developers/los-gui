@@ -81,6 +81,8 @@ public class LOSEditorJComponent
     private boolean mapChanged;
     private boolean mapOpen;
 
+    private static final String sharedBoardMetadataFileName = "SharedBoardMetadata.xml"; // name of the shared board metadata file
+
     // the map editor
     public GUILOSDataEditor losDataEditor;
     public BufferedImage mapImage;
@@ -202,7 +204,7 @@ public class LOSEditorJComponent
         try {
 
             // read the shared metadata file in the LOS archive and set the terrain types
-            sharedBoardMetadata.parseSharedBoardMetadataFile(archive.getInputStream(archive.getEntry(BoardArchive.getSharedBoardMetadataFileName())));
+            sharedBoardMetadata.parseSharedBoardMetadataFile(archive.getInputStream(archive.getEntry(sharedBoardMetadataFileName)));
 
         } catch (Exception e) {
 

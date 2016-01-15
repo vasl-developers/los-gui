@@ -441,11 +441,11 @@ public class GUILOSDataEditor extends LOSDataEditor {
      */
     public HashMap<String, String> getTerrainNames() {
 
-        HashMap<String, String> terrainNames = new HashMap<String, String>(boardArchive.getTerrainTypes().size());
+        HashMap<String, String> terrainNames = new HashMap<String, String>(sharedBoardMetadata.getTerrainTypes().size());
 
         for (String key : sharedBoardMetadata.getTerrainTypes().keySet()) {
 
-            terrainNames.put(key, boardArchive.getTerrainTypes().get(key).getLOSCategory().toString());
+            terrainNames.put(key, sharedBoardMetadata.getTerrainTypes().get(key).getLOSCategory().toString());
         }
 
         return terrainNames;
