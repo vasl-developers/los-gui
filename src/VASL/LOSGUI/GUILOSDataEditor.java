@@ -82,10 +82,17 @@ public class GUILOSDataEditor extends LOSDataEditor {
         for (int i = Math.max(x, 0); i < Math.min(x + width + 1, map.getGridWidth() - 1); i++) {
             for (int j = Math.max(y, 0); j < Math.min(y + height + 1, map.getGridHeight() - 1); j++) {
 
-                currentHex = map.gridToHex(i, j);
-
-                terrType = map.getGridTerrain(i, j).getType();
-
+                 currentHex = map.gridToHex(i, j);
+                // code change DR April 2016, trapped exception if currentHex = null
+                if (currentHex == null) {
+                    terrType=0;
+                } else {
+                    try {
+                        terrType = map.getGridTerrain(i, j).getType();
+                    } catch (Exception e) {
+                        terrType=0;
+                    }
+                }
                 // get color for non-ground level open ground
                 Color c = null;
                 switch (map.getGridElevation(i, j)) {
@@ -251,75 +258,78 @@ public class GUILOSDataEditor extends LOSDataEditor {
 
                 // set the current hex
                 tempHex = map.gridToHex(col, row);
-                if (tempHex != currentHex) {
+                // test code DR Jan 2016
+                if (tempHex != null) {
+                    if (tempHex != currentHex) {
 
-                    // set the bridge
-                    currentHex = tempHex;
-                    bridge = currentHex.getBridge();
-                }
-
-                if (bridge != null && bridge.getShape().contains(col, row)) {
-
-                    groundLevel = bridge.getRoadLevel() * pixelsPerLevel;
-                    currentTerrainHeight = pixelsPerHalfLevel;
-
-                } else {
-
-                    currentTerrain = map.getGridTerrain(col, row);
-
-                    currentTerrainHeight = currentTerrain.getHeight() * pixelsPerLevel;
-
-                    if (currentTerrain.isHalfLevelHeight()) {
-
-                        currentTerrainHeight += pixelsPerHalfLevel;
+                        // set the bridge
+                        currentHex = tempHex;
+                        bridge = currentHex.getBridge();
                     }
-                    groundLevel = map.getGridElevation(col, row) * pixelsPerLevel;
-                }
 
-                // darken pixels in shadow
-                if (currentTerrainHeight + groundLevel < currentHeight) {
+                    if (bridge != null && bridge.getShape().contains(col, row)) {
 
-                    // parse the pixel
-                    int pixel = img.getRGB(col, row);
-                    int alpha = pixel & 0xFF000000;
-                    int red = pixel & 0x000000FF;
-                    int green = (pixel & 0x0000FF00) >> 8;
-                    int blue = (pixel & 0x00FF0000) >> 16;
+                        groundLevel = bridge.getRoadLevel() * pixelsPerLevel;
+                        currentTerrainHeight = pixelsPerHalfLevel;
 
-                    // apply shadow
-                    red = (int) ((float) red * 0.7);
-                    green = (int) ((float) green * 0.7);
-                    blue = (int) ((float) blue * 0.7);
+                    } else {
 
-                    // re-assemble and paint
-                    pixel = alpha | red | (green << 8) | (blue << 16);
-                    img.setRGB(col, row, pixel);
+                        currentTerrain = map.getGridTerrain(col, row);
 
-                    currentHeight -= 1;
-                } else if (currentTerrainHeight + groundLevel > currentHeight) {
+                        currentTerrainHeight = currentTerrain.getHeight() * pixelsPerLevel;
 
-                    // parse the pixel
-                    int pixel = img.getRGB(col, row);
-                    int alpha = pixel & 0xFF000000;
-                    int red = pixel & 0x000000FF;
-                    int green = (pixel & 0x0000FF00) >> 8;
-                    int blue = (pixel & 0x00FF0000) >> 16;
+                        if (currentTerrain.isHalfLevelHeight()) {
 
-                    // apply highlight
-                    red = (int) Math.min(255, (float) (red + 50));
-                    green = (int) Math.min(255, (float) (green + 50));
-                    blue = (int) Math.min(255, (float) (blue + 50));
-
-                    // need to use custom color for woods
-                    if (currentTerrain.getName().equals("Woods")) {
-                        green = 250;
+                            currentTerrainHeight += pixelsPerHalfLevel;
+                        }
+                        groundLevel = map.getGridElevation(col, row) * pixelsPerLevel;
                     }
-                    // re-assemble and paint
-                    pixel = alpha | red | (green << 8) | (blue << 16);
-                    img.setRGB(col, row, pixel);
 
-                    // set the current height
-                    currentHeight = currentTerrainHeight + groundLevel;
+                    // darken pixels in shadow
+                    if (currentTerrainHeight + groundLevel < currentHeight) {
+
+                        // parse the pixel
+                        int pixel = img.getRGB(col, row);
+                        int alpha = pixel & 0xFF000000;
+                        int red = pixel & 0x000000FF;
+                        int green = (pixel & 0x0000FF00) >> 8;
+                        int blue = (pixel & 0x00FF0000) >> 16;
+
+                        // apply shadow
+                        red = (int) ((float) red * 0.7);
+                        green = (int) ((float) green * 0.7);
+                        blue = (int) ((float) blue * 0.7);
+
+                        // re-assemble and paint
+                        pixel = alpha | red | (green << 8) | (blue << 16);
+                        img.setRGB(col, row, pixel);
+
+                        currentHeight -= 1;
+                    } else if (currentTerrainHeight + groundLevel > currentHeight) {
+
+                        // parse the pixel
+                        int pixel = img.getRGB(col, row);
+                        int alpha = pixel & 0xFF000000;
+                        int red = pixel & 0x000000FF;
+                        int green = (pixel & 0x0000FF00) >> 8;
+                        int blue = (pixel & 0x00FF0000) >> 16;
+
+                        // apply highlight
+                        red = (int) Math.min(255, (float) (red + 50));
+                        green = (int) Math.min(255, (float) (green + 50));
+                        blue = (int) Math.min(255, (float) (blue + 50));
+
+                        // need to use custom color for woods
+                        if (currentTerrain.getName().equals("Woods")) {
+                            green = 250;
+                        }
+                        // re-assemble and paint
+                        pixel = alpha | red | (green << 8) | (blue << 16);
+                        img.setRGB(col, row, pixel);
+
+                        // set the current height
+                        currentHeight = currentTerrainHeight + groundLevel;
+                    }
                 }
             }
         }

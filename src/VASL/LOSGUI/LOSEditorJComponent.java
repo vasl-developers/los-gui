@@ -208,7 +208,7 @@ public class LOSEditorJComponent
 
         } catch (Exception e) {
 
-            throw new IOException("Unable to read the shared board metadata from the LOS archive", e);
+            throw new IOException("Unable to read the shared board metadata from the LOS archive",e);
         }
     }
 
@@ -1818,7 +1818,7 @@ public class LOSEditorJComponent
         }
 
         frame.setStatusBarText("Recreating the map image...");
-        losDataEditor.getMap().resetHexTerrain();
+        losDataEditor.getMap().resetHexTerrain(0);
         frame.paintImmediately();
         paintMapImage();
         frame.setStatusBarText("");
