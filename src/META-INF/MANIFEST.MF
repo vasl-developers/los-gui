@@ -1,21 +1,21 @@
 Manifest-Version: 1.0
-Class-Path: Vengine-3.2.14.jar vasl-6.2.0.jar smack.jar janino.jar sma
- ckx.jar wizard.jar jl1.0.1.jar xml-apis.jar batik-css.jar batik-dom.j
- ar batik-ext.jar batik-gvt.jar batik-xml.jar guava-r06.jar jna-3.5.2.
- jar junit-4.7.jar batik-anim.jar batik-util.jar jdom-2.0.5.jar xerces
- Impl.jar batik-codec.jar batik-swing.jar jmock-2.5.1.jar xalan-2.6.0.
- jar batik-bridge.jar batik-parser.jar batik-script.jar batik-svggen.j
- ar smackx-debug.jar swingx-0.9.4.jar xml-apis-ext.jar batik-svg-dom.j
- ar objenesis-1.0.jar batik-awt-util.jar batik-gui-util.jar bsh-core-2
- .0b4.jar commons-io-2.2.jar platform-3.5.2.jar Vengine-3.2.14.jar bat
- ik-extension.jar cglib-2.1_3-src.jar cglib-nodep-2.2.jar slf4j-api-1.
- 7.5.jar batik-transcoder.jar commons-compiler.jar commons-lang-2.5.ja
- r swing-worker-1.2.jar cglib-nodep-2.1_3.jar commons-codec-1.6.jar ha
- mcrest-core-1.1.jar mockito-all-1.8.1.jar java-getopt-1.0.13.jar jmoc
- k-junit3-2.5.1.jar jmock-junit4-2.5.1.jar jmock-legacy-2.5.1.jar jmoc
- k-script-2.5.1.jar miglayout-core-4.2.jar swing-layout-1.0.3.jar Appl
- eJavaExtensions.jar logback-core-1.0.13.jar TimingFramework-1.0.jar B
- rowserLauncher2-1_3.jar hamcrest-library-1.1.jar miglayout-swing-4.2j
- u.jar logback-classic-1.0.13.jar
+Class-Path: smack.jar janino.jar smackx.jar wizard.jar jl1.0.1.jar Ven
+ gine.jar xml-apis.jar batik-css.jar batik-dom.jar batik-ext.jar batik
+ -gvt.jar batik-xml.jar guava-r06.jar jna-3.5.2.jar junit-4.7.jar bati
+ k-anim.jar batik-util.jar jdom-2.0.5.jar xercesImpl.jar batik-codec.j
+ ar batik-swing.jar jmock-2.5.1.jar xalan-2.6.0.jar batik-bridge.jar b
+ atik-parser.jar batik-script.jar batik-svggen.jar smackx-debug.jar sw
+ ingx-0.9.4.jar xml-apis-ext.jar batik-svg-dom.jar objenesis-1.0.jar b
+ atik-awt-util.jar batik-gui-util.jar bsh-core-2.0b4.jar commons-io-2.
+ 2.jar platform-3.5.2.jar batik-extension.jar cglib-2.1_3-src.jar cgli
+ b-nodep-2.2.jar slf4j-api-1.7.5.jar slf4j-api-1.7.7.jar batik-transco
+ der.jar commons-compiler.jar commons-lang-2.5.jar swing-worker-1.2.ja
+ r cglib-nodep-2.1_3.jar commons-codec-1.6.jar hamcrest-core-1.1.jar m
+ ockito-all-1.8.1.jar java-getopt-1.0.13.jar jmock-junit3-2.5.1.jar jm
+ ock-junit4-2.5.1.jar jmock-legacy-2.5.1.jar jmock-script-2.5.1.jar lo
+ gback-core-1.1.2.jar miglayout-core-4.2.jar swing-layout-1.0.3.jar Ap
+ pleJavaExtensions.jar TimingFramework-1.0.jar BrowserLauncher2-1_3.ja
+ r hamcrest-library-1.1.jar logback-classic-1.1.2.jar miglayout-swing-
+ 4.2ju.jar
 Main-Class: VASL.LOSGUI.LOSEditorApp
 
