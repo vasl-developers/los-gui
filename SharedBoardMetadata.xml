@@ -212,6 +212,14 @@
 			<color name="OrchL5" />
 			<color name="OrchL6" />
 			<color name="OrchTrees" />
+			<color name="DTO_OrchL0" />
+			<color name="DTO_OrchL1" />
+			<color name="DTO_OrchL2" />
+			<color name="DTO_OrchL3" />
+			<color name="DTO_OrchL4" />
+			<color name="DTO_OrchL5" />
+			<color name="DTO_OrchL6" />
+			<color name="DTO_OrchTrees" />
 		</underlaySSRule>
 		<underlaySSRule name="ShellholesToCactusPatches" image="CactusPattern.gif">
 			<color name="Shellhole1" />
@@ -1004,6 +1012,8 @@
 		<color name="CactusGreen" red="123" green="132" blue="8" terrain="Cactus Patch" elevation="UNKNOWN" />
 		<color name="CactusBrown" red="90" green="66" blue="33" terrain="Cactus Patch" elevation="UNKNOWN" />
 		<!-- Desert colors for desert boards -->
+		<color name="BrokenGround" red="60" green="44" blue="22" terrain="Broken Ground" elevation="UNKNOWN" />
+
 		<color name="Hammada1" red="190" green="149" blue="52" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Hammada2" red="169" green="127" blue="35" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Hammada3" red="148" green="113" blue="38" terrain="Hammada" elevation="UNKNOWN" />
@@ -1020,10 +1030,10 @@
 		<color name="Sand1" red="230" green="192" blue="16" terrain="Sand" elevation="UNKNOWN" />
 		<color name="Track" red="102" green="78" blue="37" terrain="Open Ground" elevation="UNKNOWN" />
 		<color name="WadiBrown1" red="204" green="159" blue="52" terrain="Wadi" elevation="UNKNOWN" />
-		<color name="WadiBrown2" red="164" green="123" blue="0" terrain="Wadi" elevation="UNKNOWN" />
+		<color name="WadiBrown2" red="164" green="120" blue="0" terrain="Wadi" elevation="UNKNOWN" />
 		<color name="WadiBrown3" red="127" green="91" blue="33" terrain="Wadi" elevation="UNKNOWN" />
 		<color name="WadiBlack" red="83" green="51" blue="37" terrain="Wadi" elevation="UNKNOWN" />
-		<color name="WadiCliff" red="65" green="54" blue="28" terrain="Wadi" elevation="UNKNOWN" />
+		<color name="WadiCliff" red="65" green="54" blue="28" terrain="Cliff" elevation="UNKNOWN" />
 		<color name="DTO_BrushL0" red="161" green="161" blue="56" terrain="Brush" elevation="0" />
 		<color name="DTO_BrushL1" red="161" green="162" blue="56" terrain="Brush" elevation="1" />
 		<color name="DTO_BrushL2" red="161" green="163" blue="56" terrain="Brush" elevation="2" />
@@ -1081,8 +1091,49 @@
 		<color name="DTO_OrchTrees" red="118" green="114" blue="37" terrain="Orchard" elevation="UNKNOWN" />
 		<color name="DTO_WoodsGreen" red="119" green="119" blue="57" terrain="Woods" elevation="UNKNOWN" />
 		<color name="DTO_WoodsBlack" red="44" green="42" blue="23" terrain="Woods" elevation="UNKNOWN" />
+		<color name="DTO_DuneCrest1" red="120" green="79" blue="48" terrain="Dune, Crest Low" elevation="UNKNOWN" />
+		<color name="DTO_DuneLow1" red="252" green="132" blue="14" terrain="Sand Dune, Low" elevation="UNKNOWN" />
+		<color name="DTO_DuneLow2" red="201" green="158" blue="14" terrain="Sand Dune, Low" elevation="UNKNOWN" />
+		<color name="DTO_DuneLow3" red="232" green="188" blue="0" terrain="Sand Dune, Low" elevation="UNKNOWN" />
+		<color name="DTO_DuneLow4" red="218" green="178" blue="139" terrain="Sand Dune, Low" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg1" red="10" green="13" blue="12" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg2" red="49" green="52" blue="52" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg3" red="63" green="65" blue="65" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg4" red="75" green="79" blue="83" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg5" red="98" green="100" blue="102" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg6" red="92" green="104" blue="115" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg7" red="120" green="124" blue="128" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg8" red="110" green="129" blue="145" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg9" red="129" green="146" blue="162" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg10" red="143" green="147" blue="153" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg11" red="152" green="167" blue="182" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg12" red="164" green="168" blue="175" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg13" red="179" green="185" blue="195" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg14" red="183" green="186" blue="189" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneBldg15" red="204" green="207" blue="211" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_StoneRowhouseBar" red="4" green="4" blue="4" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
+		<color name="DTO_StoneStairwell" red="251" green="251" blue="251" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg1" red="34" green="32" blue="28" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg2" red="63" green="65" blue="65" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg3" red="80" green="77" blue="67" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg4" red="102" green="91" blue="69" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg5" red="117" green="98" blue="61" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg6" red="136" green="118" blue="80" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg7" red="155" green="127" blue="71" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg8" red="162" green="127" blue="62" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg9" red="166" green="129" blue="58" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg10" red="174" green="142" blue="78" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg11" red="168" green="148" blue="106" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg12" red="189" green="158" blue="96" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg13" red="194" green="158" blue="84" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg14" red="209" green="180" blue="120" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodBldg15" red="228" green="208" blue="152" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodRowhouseBar" red="4" green="3" blue="4" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="DTO_WoodStairwell" red="250" green="251" blue="250" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
 
-
+		<!-- Desert colors for desert overlays -->
+		<color name="Hillock1" red="114" green="83" blue="42" terrain="Hillock Summit" elevation="UNKNOWN" />
+		<color name="Dier" red="252" green="223" blue="89" terrain="Dier" elevation="UNKNOWN" />
 	</colors>
 
 	<terrainTypes>
@@ -1185,12 +1236,12 @@
         <terrainType name="Scrub" typeCode="100" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="119" mapColorGreen="67" mapColorBlue="0" LOSCategory="OPEN"  />
         <terrainType name="Hammada" typeCode="101" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="59" mapColorGreen="55" mapColorBlue="19" LOSCategory="OPEN"  />
         <terrainType name="Dier" typeCode="102" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
-        <terrainType name="Dier Lip" typeCode="103" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
+        <terrainType name="Dier Lip" typeCode="103" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="HEXSIDE"  />
         <terrainType name="Wadi" typeCode="104" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="191" mapColorGreen="111" mapColorBlue="7" LOSCategory="DEPRESSION"  />
         <terrainType name="Hillock" typeCode="105" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="85" mapColorGreen="45" mapColorBlue="4" LOSCategory="OTHER"  />
-        <terrainType name="Hillock Summit" typeCode="106" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
+        <terrainType name="Hillock Summit" typeCode="106" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="114" mapColorGreen="83" mapColorBlue="42" LOSCategory="OPEN"  />  //mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
         <terrainType name="Sand" typeCode="107" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
-        <terrainType name="Sand Dune" typeCode="108" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OTHER"  />
+        <terrainType name="Sand Dune, Low" typeCode="108" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OTHER"  />
         <terrainType name="Dune, Crest Low" typeCode="109" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="HEXSIDE"  />
         <terrainType name="Dune, Crest High" typeCode="110" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="HEXSIDE"  />
         <terrainType name="Sangar" typeCode="111" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="250" mapColorGreen="235" mapColorBlue="130" LOSCategory="OPEN"  />
@@ -1203,7 +1254,7 @@
         <terrainType name="Olive Grove" typeCode="118" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="TRUE" split="0.5" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="51" mapColorGreen="163" mapColorBlue="51" LOSCategory="OTHER"  />
         <terrainType name="Vineyard" typeCode="119" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="0" mapColorRed="46" mapColorGreen="131" mapColorBlue="47" LOSCategory="OTHER"  />
         <terrainType name="Broken Ground" typeCode="120" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="251" mapColorGreen="223" mapColorBlue="147" LOSCategory="OPEN"  />
-		<terrainType name="Scrub" typeCode="121" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="175" mapColorGreen="188" mapColorBlue="106" LOSCategory="OPEN"  />
+		<!--<terrainType name="Scrub" typeCode="121" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="175" mapColorGreen="188" mapColorBlue="106" LOSCategory="OPEN"  /> -->
         <terrainType name="Temple" typeCode="125" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="BUILDING"  />
         <terrainType name="Light Jungle" typeCode="126" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="47" mapColorGreen="131" mapColorBlue="47" LOSCategory="WOODS"  />
         <terrainType name="Dense Jungle" typeCode="127" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="47" mapColorGreen="131" mapColorBlue="47" LOSCategory="WOODS"  />
@@ -1233,7 +1284,7 @@
         <terrainType name="Railroad, Elevated" typeCode="155" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="204" mapColorGreen="240" mapColorBlue="153" LOSCategory="OPEN"  />
         <terrainType name="Railroad, Sunken" typeCode="156" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="204" mapColorGreen="240" mapColorBlue="153" LOSCategory="OPEN"  />
 		<terrainType name="Rrembankment" typeCode="157" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="0" mapColorGreen="127" mapColorBlue="138" LOSCategory="HEXSIDE"  />
-		<terrainType name="Tower Hindrance" typeCode="160" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="BUILDING"  />
+		<terrainType name="Tower Hindrance" typeCode="160" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="OTHER"  />
         <terrainType name="Tower, 2 Level Hindrance" typeCode="161" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="2" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="BUILDING"  />
         <terrainType name="Tower, 3 Level Hindrance" typeCode="162" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="3" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="BUILDING"  />
         <terrainType name="Tower Obstacle" typeCode="163" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="BUILDING"  />
@@ -1248,6 +1299,29 @@
 		<terrainType name="Interior Factory Wall, 1 Level" typeCode="172" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="1" mapColorGreen="1" mapColorBlue="0" LOSCategory="FACTORY"  />
 		<terrainType name="Interior Factory Wall, 2 Level" typeCode="173" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="1" mapColorGreen="1" mapColorBlue="0" LOSCategory="FACTORY"  />
 		<terrainType name="Cellar" typeCode="174" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="155" mapColorGreen="155" mapColorBlue="155" LOSCategory="BUILDING"  />
+		<terrainType name="Light Woods" typeCode="175" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.5" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="85" mapColorGreen="95" mapColorBlue="45" LOSCategory="OTHER"  />
+		<terrainType name="Gutted Stone Factory, 1.5 Level" typeCode="180" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="1.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="0" mapColorRed="236" mapColorGreen="236" mapColorBlue="236" LOSCategory="FACTORY"  />
+		<terrainType name="Gutted Stone Factory, 2.5 Level" typeCode="181" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="2.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="0" mapColorRed="216" mapColorGreen="216" mapColorBlue="216" LOSCategory="FACTORY"  />
+		<terrainType name="Gutted Stone Building" typeCode="182" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="155" mapColorGreen="155" mapColorBlue="155" LOSCategory="BUILDING"  />
+		<terrainType name="Gutted Stone Building, 1 Level" typeCode="183" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="235" mapColorGreen="235" mapColorBlue="235" LOSCategory="BUILDING"  />
+		<terrainType name="Gutted Stone Building, 2 Level" typeCode="184" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="215" mapColorGreen="215" mapColorBlue="215" LOSCategory="BUILDING"  />
+		<terrainType name="Gutted Stone Building, 3 Level" typeCode="185" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="3" mapColorRed="103" mapColorGreen="203" mapColorBlue="203" LOSCategory="BUILDING"  />
+		<terrainType name="Gutted Stone Building, 4 Level" typeCode="186" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="4" mapColorRed="219" mapColorGreen="219" mapColorBlue="219" LOSCategory="BUILDING"  />
+		<terrainType name="Stone Rubble Ground Level" typeCode="190" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="OTHER"  />
+		<terrainType name="Stone Rubble Level 1" typeCode="191" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="OTHER"  />
+		<terrainType name="Stone Rubble Level 2" typeCode="192" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="OTHER"  />
+		<terrainType name="Stone Rubble Level 3" typeCode="193" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="3" mapColorRed="115" mapColorGreen="115" mapColorBlue="115" LOSCategory="OTHER"  />
+		<terrainType name="Wooden Rubble Ground Level" typeCode="194" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="TRUE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="147" mapColorGreen="95" mapColorBlue="35" LOSCategory="OTHER"  />
+		<terrainType name="Wooden Rubble Level 1" typeCode="195" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="147" mapColorGreen="95" mapColorBlue="35" LOSCategory="OTHER"  />
+		<terrainType name="Wooden Rubble Level 2" typeCode="196" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="2" mapColorRed="147" mapColorGreen="95" mapColorBlue="35" LOSCategory="OTHER"  />
+		<terrainType name="Wooden Rubble Level 3" typeCode="197" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="3" mapColorRed="147" mapColorGreen="95" mapColorBlue="35" LOSCategory="OTHER"  />
+		<terrainType name="Wooden Factory, 1 Level" typeCode="198" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="1.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="173" mapColorGreen="111" mapColorBlue="7" LOSCategory="FACTORY"  />
+		<terrainType name="Wooden Factory Wall, 1 Level" typeCode="199" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="39" mapColorGreen="39" mapColorBlue="39" LOSCategory="FACTORY"  />
+		<terrainType name="PartialOrchard" typeCode="200" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.5" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="1" mapColorRed="55" mapColorGreen="163" mapColorBlue="55" LOSCategory="HEXSIDE"  />
+		<terrainType name="OffBObserver" typeCode="201" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="0" mapColorGreen="0" mapColorBlue="0" LOSCategory="OTHER"  />
+		<terrainType name="Crest" typeCode="202" isLOSObstacle="FALSE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="FALSE" height="0" mapColorRed="0" mapColorGreen="0" mapColorBlue="001" LOSCategory="OPEN"  />
+		<terrainType name="MultipleWooden" typeCode="203" isLOSObstacle="TRUE" isLOSHindrance="FALSE" isHalfLevelHeight="FALSE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="TRUE" isLowerLOSHindrance="FALSE" height="1" mapColorRed="164" mapColorGreen="116" mapColorBlue="64" LOSCategory="BUILDING"  />
+		<terrainType name="Monument" typeCode="204" isLOSObstacle="FALSE" isLOSHindrance="TRUE" isHalfLevelHeight="TRUE" isInherentTerrain="FALSE" split="0.0" isLowerLOSObstacle="FALSE" isLowerLOSHindrance="TRUE" height="0" mapColorRed="10" mapColorGreen="127" mapColorBlue="138" LOSCategory="OTHER"  />
 
 	</terrainTypes>
 
@@ -1518,6 +1592,7 @@
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level0"/>
 		</colorSSR>
+
 		<colorSSR name="MarshToLevel1">
 			<colorMap fromColor="MarshGreenL0" toColor="Level1"/>
 			<colorMap fromColor="MarshBrownL0" toColor="Level1"/>
@@ -1529,6 +1604,18 @@
 			<colorMap fromColor="SeparatedMarshBrownL1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level1"/>
+		</colorSSR>
+		<colorSSR name="Marsh_1ToLevel_1">
+			<colorMap fromColor="MarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="MarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level_1"/>
+		</colorSSR>
+		<colorSSR name="Marsh0ToLevel0">
+			<colorMap fromColor="MarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="MarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level0"/>
 		</colorSSR>
 		<colorSSR name="GulliesToStreams">
 			<colorMap fromColor="GullyGreen2" toColor="StreamGreen2"/>
@@ -1754,6 +1841,24 @@
 		<colorSSR name="Level1ToLevel_1">
 			<colorMap fromColor="Level1" toColor="Level_1"/>
 		</colorSSR>
+		<colorSSR name="Level0ToLevel1">
+			<colorMap fromColor="Level0" toColor="Level1"/>
+		</colorSSR>
+		<colorSSR name="Level0ToLevel2">
+			<colorMap fromColor="Level0" toColor="Level2"/>
+		</colorSSR>
+		<colorSSR name="Level0ToLevel3">
+			<colorMap fromColor="Level0" toColor="Level3"/>
+		</colorSSR>
+		<colorSSR name="Level0ToLevel4">
+			<colorMap fromColor="Level0" toColor="Level4"/>
+		</colorSSR>
+		<colorSSR name="Level0ToLevel5">
+			<colorMap fromColor="Level0" toColor="Level5"/>
+		</colorSSR>
+		<colorSSR name="Level0ToLevel_1">
+			<colorMap fromColor="Level0" toColor="Level_1"/>
+		</colorSSR>
 		<colorSSR name="Level_1ToLevel0">
 			<colorMap fromColor="Level_1" toColor="Level0"/>
 		</colorSSR>
@@ -1831,46 +1936,70 @@
 			<colorMap fromColor="PaddyInterior" toColor="GrainL0"/>
 		</colorSSR>
 		<colorSSR name="DTOtoETO">
-			<colorMap fromColor="DesertL_2" toColor="Level_2"/>
-			<colorMap fromColor="DesertL_1" toColor="Level_1"/>
-			<colorMap fromColor="DesertL0" toColor="Level0"/>
-			<colorMap fromColor="DirtRdDesertL_2" toColor="DirtRdL_2"/>
-			<colorMap fromColor="DirtRdDesertL_1" toColor="DirtRdL_1"/>
-			<colorMap fromColor="DirtRdDesertL0" toColor="DirtRdL0"/>
-			<colorMap fromColor="DirtRdDesertL1" toColor="DirtRdL1"/>
-			<colorMap fromColor="DirtRdDesertL2" toColor="DirtRdL2"/>
-			<colorMap fromColor="DirtRdDesertL3" toColor="DirtRdL3"/>
-			<colorMap fromColor="DirtRdDesertL4" toColor="DirtRdL4"/>
-			<colorMap fromColor="DirtRdDesertL5" toColor="DirtRdL5"/>
-			<colorMap fromColor="DirtRdDesertL6" toColor="DirtRdL6"/>
-			<colorMap fromColor="OrchDesertL_2" toColor="OrchL_2"/>
-			<colorMap fromColor="OrchDesertL_1" toColor="OrchL_1"/>
-			<colorMap fromColor="OrchDesertL0" toColor="OrchL0"/>
-			<colorMap fromColor="OrchDesertL1" toColor="OrchL1"/>
-			<colorMap fromColor="OrchDesertL2" toColor="OrchL2"/>
-			<colorMap fromColor="OrchDesertL3" toColor="OrchL3"/>
-			<colorMap fromColor="OrchDesertL4" toColor="OrchL4"/>
-			<colorMap fromColor="OrchDesertL5" toColor="OrchL5"/>
-			<colorMap fromColor="OrchDesertL6" toColor="OrchL6"/>
-			<colorMap fromColor="BrushDesertL_2" toColor="BrushL_2"/>
-			<colorMap fromColor="BrushDesertL_1" toColor="BrushL_1"/>
-			<colorMap fromColor="BrushDesertL0" toColor="BrushL0"/>
-			<colorMap fromColor="BrushDesertL1" toColor="BrushL1"/>
-			<colorMap fromColor="BrushDesertL2" toColor="BrushL2"/>
-			<colorMap fromColor="BrushDesertL3" toColor="BrushL3"/>
-			<colorMap fromColor="BrushDesertL4" toColor="BrushL4"/>
-			<colorMap fromColor="BrushDesertL5" toColor="BrushL5"/>
-			<colorMap fromColor="BrushDesertL6" toColor="BrushL6"/>
-			<colorMap fromColor="DirtRdDesertBridge" toColor="DirtRdBridge"/>
-			<colorMap fromColor="DirtRdBridgeDesert" toColor="DirtRdBridge"/>
-			<colorMap fromColor="OrchTreesDesert" toColor="OrchTrees"/>
-			<colorMap fromColor="WadiBrown1" toColor="GullyGreen1"/>
-			<colorMap fromColor="WadiBrown2" toColor="GullyBrown2"/>
-			<colorMap fromColor="WadiBrown3" toColor="GullyBrown3"/>
-			<colorMap fromColor="WadiBlack" toColor="GullyBlack"/>
-			<colorMap fromColor="Wadi1" toColor="GullyGreen1"/>
-			<colorMap fromColor="Wadi2" toColor="GullyBrown2"/>
-			<colorMap fromColor="Wadi3" toColor="GullyBlack"/>
+			<colorMap fromColor="DTO_BrushL0" toColor="BrushL0" />
+			<colorMap fromColor="DTO_BrushL1" toColor="BrushL1" />
+			<colorMap fromColor="DTO_BrushL2" toColor="BrushL2" />
+			<colorMap fromColor="DTO_BrushL3" toColor="BrushL3" />
+			<colorMap fromColor="DTO_BrushL4" toColor="BrushL4" />
+			<colorMap fromColor="DTO_BrushL5" toColor="BrushL5" />
+			<colorMap fromColor="DTO_BrushL6" toColor="BrushL6" />
+
+			<colorMap fromColor="DTO_BldgShadowL0" toColor="BldgShadowL0" />
+
+			<colorMap fromColor="DTO_DirtRdL0" toColor="DirtRdL0" />
+			<colorMap fromColor="DTO_DirtRdL1" toColor="DirtRdL1" />
+			<colorMap fromColor="DTO_DirtRdL2" toColor="DirtRdL2" />
+			<colorMap fromColor="DTO_DirtRdL3" toColor="DirtRdL3" />
+			<colorMap fromColor="DTO_DirtRdL4" toColor="DirtRdL4" />
+			<colorMap fromColor="DTO_DirtRdL5" toColor="DirtRdL5" />
+			<colorMap fromColor="DTO_DirtRdL6" toColor="DirtRdL6" />
+			<colorMap fromColor="DTO_DirtRdBridge" toColor="DirtRdBridge" />
+
+			<colorMap fromColor="DTO_GraveyardGreen" toColor="GraveyardGreen" />
+			<colorMap fromColor="DTO_GraveyardShadow" toColor="GraveyardShadow" />
+
+			<colorMap fromColor="WadiBrown1" toColor="GullyGreen1" />
+			<colorMap fromColor="WadiBrown1" toColor="GullyGreen2" />
+			<colorMap fromColor="WadiBrown1" toColor="GullyBrown3" />
+			<colorMap fromColor="WadiBlack" toColor="GullyBlack" />
+			<colorMap fromColor="WadiCliff" toColor="GullyCliff" />
+
+			<colorMap fromColor="DTO_HedgeGreen" toColor="HedgeGreen" />
+			<colorMap fromColor="DTO_BoardNum" toColor="BoardNum" />
+
+			<colorMap fromColor="DTO_Level0_1" toColor="Level0" />
+			<colorMap fromColor="DTO_Level0_2" toColor="Level0" />
+			<colorMap fromColor="DTO_Level0_3" toColor="Level0" />
+			<colorMap fromColor="DTO_Level0_4" toColor="Level0" />
+			<colorMap fromColor="DTO_Level0_5" toColor="Level0" />
+			<colorMap fromColor="DTO_Level0_6" toColor="Level0" />
+			<colorMap fromColor="DTO_Level1" toColor="Level1" />
+			<colorMap fromColor="DTO_Level2" toColor="Level2" />
+			<colorMap fromColor="DTO_Level3" toColor="Level3" />
+			<colorMap fromColor="DTO_Level4" toColor="Level4" />
+			<colorMap fromColor="DTO_Level5" toColor="Level5" />
+			<colorMap fromColor="DTO_Level6" toColor="Level6" />
+
+			<colorMap fromColor="DTO_OrchL0" toColor="Level0" />
+			<colorMap fromColor="DTO_OrchL1" toColor="Level1" />
+			<colorMap fromColor="DTO_OrchL2" toColor="Level2" />
+			<colorMap fromColor="DTO_OrchL3" toColor="Level3" />
+			<colorMap fromColor="DTO_OrchL4" toColor="Level4" />
+			<colorMap fromColor="DTO_OrchL5" toColor="Level5" />
+			<colorMap fromColor="DTO_OrchL6" toColor="Level6" />
+			<colorMap fromColor="DTO_OrchTrees" toColor="OrchTrees" />
+
+			<colorMap fromColor="DTO_PavedRdL0" toColor="PavedRdL0" />
+			<colorMap fromColor="DTO_PavedRdL1" toColor="PavedRdL1" />
+			<colorMap fromColor="DTO_PavedRdL2" toColor="PavedRdL2" />
+			<colorMap fromColor="DTO_PavedRdL3" toColor="PavedRdL3" />
+			<colorMap fromColor="DTO_PavedRdL4" toColor="PavedRdL4" />
+			<colorMap fromColor="DTO_PavedRdL5" toColor="PavedRdL5" />
+			<colorMap fromColor="DTO_PavedRdL6" toColor="PavedRdL6" />
+			<colorMap fromColor="DTO_PavedRdBridge" toColor="PavedRdBridge" />
+
+			<colorMap fromColor="DTO_WoodsGreen" toColor="WoodsGreen" />
+
 		</colorSSR>
 		<!-- Winter must always be last -->
 		<colorSSR name="Winter">
@@ -2250,7 +2379,7 @@
         <LOSSSRule name="WallsOnly" type="ignore" fromValue="" toValue="" />
         <LOSSSRule name="DTOtoETO" type="ignore" fromValue="" toValue="" />
         <LOSSSRule name="NoWhiteHexIDs" type="ignore" fromValue="" toValue="" />
-        <LOSSSRule name="LightWoods" type="ignore" fromValue="" toValue="" />
+
         <LOSSSRule name="Mud" type="ignore" fromValue="" toValue="" />
         <LOSSSRule name="Winter" type="ignore" fromValue="" toValue="" />
         <LOSSSRule name="NoRoads" type="ignore" fromValue="" toValue="" />
@@ -2279,6 +2408,7 @@
         <LOSSSRule name="HedgesToOG" type="terrainMap" fromValue="Hedge" toValue="Open Ground" />
         <LOSSSRule name="NoHedges" type="terrainMap" fromValue="Hedge" toValue="Open Ground" />
         <LOSSSRule name="WallsToOG" type="terrainMap" fromValue="Wall" toValue="Open Ground" />
+		<LOSSSRule name="HedgesOnly" type="terrainMap" fromValue="Wall" toValue="Hedge" />
         <LOSSSRule name="NoWalls" type="terrainMap" fromValue="Wall" toValue="Open Ground" />
         <LOSSSRule name="PlowedFields" type="terrainMap" fromValue="Grain" toValue="Plowed Field" />
         <LOSSSRule name="RiverToValley" type="terrainMap" fromValue="River" toValue="Open Ground" />
@@ -2286,6 +2416,7 @@
         <LOSSSRule name="NoCliffs" type="terrainMap" fromValue="Cliff" toValue="Open Ground" />
         <LOSSSRule name="WallsToBocage" type="terrainMap" fromValue="Wall" toValue="Bocage" />
         <LOSSSRule name="HedgesToBocage" type="terrainMap" fromValue="Hedge" toValue="Bocage" />
+		<LOSSSRule name="LightWoods" type="terrainMap" fromValue="Woods" toValue="Light Woods" />
         <!-- too many problems around roads to reliably change terrain
         <LOSSSRule name="OrchardsToShellholes" type="terrainMap" fromValue="Orchard" toValue="Shellholes" />
         <LOSSSRule name="OrchardsToCrags" type="terrainMap" fromValue="Orchard" toValue="Crags" />
@@ -2294,6 +2425,7 @@
         -->
         <LOSSSRule name="CragsToOrchard" type="terrainMap" fromValue="Crags" toValue="Orchard" />
         <LOSSSRule name="CragsToShellholes" type="terrainMap" fromValue="Crags" toValue="Shellholes" />
+		<LOSSSRule name="OrchardsToShellholes" type="terrainMap" fromValue="Orchard" toValue="Shellholes" />
 
         <!-- simple elevation maps. Note that elevations can only be decreased -->
         <LOSSSRule name="Level6ToLevel5" type="elevationMap" fromValue="6" toValue="5" />
@@ -2353,6 +2485,8 @@
         <LOSSSRule name="MarshToLevel2" type="terrainToElevationMap" fromValue="Marsh" toValue="2" />
         <LOSSSRule name="MarshToLevel3" type="terrainToElevationMap" fromValue="Marsh" toValue="3" />
         <LOSSSRule name="MarshToLevel4" type="terrainToElevationMap" fromValue="Marsh" toValue="4" />
+		<LOSSSRule name="Marsh_1ToLevel_1" type="terrainToSelectElevationMap" fromValue="Marsh" toValue="-1" />
+		<LOSSSRule name="Marsh0ToLevel0" type="terrainToSelectElevationMap" fromValue="Marsh" toValue="0" />
         <LOSSSRule name="MarshToBrush" type="terrainMap" fromValue="Marsh" toValue="Brush" />
         <LOSSSRule name="MarshToWoods" type="terrainMap" fromValue="Marsh" toValue="Woods" />
         <LOSSSRule name="MarshToGrain" type="terrainMap" fromValue="Marsh" toValue="Grain" />
@@ -2385,6 +2519,16 @@
         <LOSSSRule name="Level3ToBrush" type="elevationToTerrainMap" fromValue="3" toValue="Brush" />
         <LOSSSRule name="Level4ToBrush" type="elevationToTerrainMap" fromValue="4" toValue="Brush" />
 
+		<!-- custom mapping to convert Stone Buildings to Gutted Stone Buildings -->
+		<LOSSSRule name="StoneToGutted" type="terrainMap" fromValue="Stone Building" toValue="Gutted Stone Building" />
+		<LOSSSRule name="StoneToGutted1" type="terrainMap" fromValue="Stone Building, Level 1" toValue="Gutted Stone Building, Level 1" />
+		<LOSSSRule name="StoneToGutted2" type="terrainMap" fromValue="Stone Building, Level 2" toValue="Gutted Stone Building, Level 2" />
+		<LOSSSRule name="StoneToGutted3" type="terrainMap" fromValue="Stone Building, Level 3" toValue="Gutted Stone Building, Level 3" />
+		<LOSSSRule name="StoneToGutted4" type="terrainMap" fromValue="Stone Building, Level 4" toValue="Gutted Stone Building, Level 4" />
+		<LOSSSRule name="StoneToGuttedFactory1.5" type="terrainMap" fromValue="Stone Factory, Level 1.5" toValue="Gutted Stone Factory, Level 1.5" />
+		<LOSSSRule name="StoneToGuttedFactory2.5" type="terrainMap" fromValue="Stone Factory, Level 2.5" toValue="Gutted Stone Factory, Level 2.5" />
+		<!-- custom mapping to convert Multiple Wooden Buildings to Huts -->
+		<LOSSSRule name="MultipleWoodtoHuts" type="terrainMap" fromValue="MultipleWooden" toValue="Huts" />
     </LOSSSRules>
 
     <LOSCounterRules>
@@ -2408,60 +2552,66 @@
         
         <terrainCounter name="Stone Rubble" terrain="Stone Rubble"/>
         <terrainCounter name="Wood Rubble" terrain="Wooden Rubble"/>
+		<terrainCounter name="Drift: 1 ca1" terrain="Hedge"/>
+		<terrainCounter name="Drift: 2 ca2" terrain="Hedge"/>
+		<terrainCounter name="Drift: 3 ca3" terrain="Hedge"/>
+		<terrainCounter name="Drift: 4 ca4" terrain="Hedge"/>
+		<terrainCounter name="Drift: 5 ca5" terrain="Hedge"/>
+		<terrainCounter name="Drift: 6 ca6" terrain="Hedge"/>
 
-        <wreckCounter name="Wreck"/>
-        <wreckCounter name="Burnt Out Wreck"/>
+		<wreckCounter name="Wreck"/>
+                <wreckCounter name="Burnt Out Wreck"/>
 
-        <OBACounter name="Red OBA FFE:1"/>
-        <OBACounter name="Red OBA FFE:2"/>
-        <OBACounter name="Red OBA FFE:C"/>
-        <OBACounter name="Blue OBA FFE:1"/>
-        <OBACounter name="Blue OBA FFE:2"/>
-        <OBACounter name="Blue OBA FFE:C"/>
-        <OBACounter name="Green OBA FFE:1"/>
-        <OBACounter name="Green OBA FFE:2"/>
-        <OBACounter name="Green OBA FFE:C"/>
-        <OBACounter name="RU OBA FFE:1"/>
-        <OBACounter name="RU OBA FFE:2"/>
-        <OBACounter name="RU OBA FFE:C"/>
-        <OBACounter name="AM OBA FFE:1"/>
-        <OBACounter name="AM OBA FFE:2"/>
-        <OBACounter name="AM OBA FFE:C"/>
-        <OBACounter name="BR OBA FFE:1"/>
-        <OBACounter name="BR OBA FFE:2"/>
-        <OBACounter name="BR OBA FFE:C"/>
-        <OBACounter name="FR OBA FFE:1"/>
-        <OBACounter name="FR OBA FFE:2"/>
-        <OBACounter name="FR OBA FFE:C"/>
-        <OBACounter name="CH OBA FFE:1"/>
-        <OBACounter name="CH OBA FFE:2"/>
-        <OBACounter name="CH OBA FFE:C"/>
-        <OBACounter name="AL OBA FFE:1"/>
-        <OBACounter name="AL OBA FFE:2"/>
-        <OBACounter name="AL OBA FFE:C"/>
-        <OBACounter name="GE OBA FFE:1"/>
-        <OBACounter name="GE OBA FFE:2"/>
-        <OBACounter name="GE OBA FFE:C"/>
-        <OBACounter name="SS OBA FFE:1"/>
-        <OBACounter name="SS OBA FFE:2"/>
-        <OBACounter name="SS OBA FFE:C"/>
-        <OBACounter name="JA OBA FFE:1"/>
-        <OBACounter name="JA OBA FFE:2"/>
-        <OBACounter name="JA OBA FFE:C"/>
-        <OBACounter name="IT OBA FFE:1"/>
-        <OBACounter name="IT OBA FFE:2"/>
-        <OBACounter name="IT OBA FFE:C"/>
-        <OBACounter name="FI OBA FFE:1"/>
-        <OBACounter name="FI OBA FFE:2"/>
-        <OBACounter name="FI OBA FFE:C"/>
-        <OBACounter name="AX OBA FFE:1"/>
-        <OBACounter name="AX OBA FFE:2"/>
-        <OBACounter name="AX OBA FFE:C"/>
-        <OBACounter name="HU OBA FFE:1"/>
-        <OBACounter name="HU OBA FFE:2"/>
-        <OBACounter name="HU OBA FFE:C"/>
+                <OBACounter name="Red OBA FFE:1"/>
+                <OBACounter name="Red OBA FFE:2"/>
+                <OBACounter name="Red OBA FFE:C"/>
+                <OBACounter name="Blue OBA FFE:1"/>
+                <OBACounter name="Blue OBA FFE:2"/>
+                <OBACounter name="Blue OBA FFE:C"/>
+                <OBACounter name="Green OBA FFE:1"/>
+                <OBACounter name="Green OBA FFE:2"/>
+                <OBACounter name="Green OBA FFE:C"/>
+                <OBACounter name="RU OBA FFE:1"/>
+                <OBACounter name="RU OBA FFE:2"/>
+                <OBACounter name="RU OBA FFE:C"/>
+                <OBACounter name="AM OBA FFE:1"/>
+                <OBACounter name="AM OBA FFE:2"/>
+                <OBACounter name="AM OBA FFE:C"/>
+                <OBACounter name="BR OBA FFE:1"/>
+                <OBACounter name="BR OBA FFE:2"/>
+                <OBACounter name="BR OBA FFE:C"/>
+                <OBACounter name="FR OBA FFE:1"/>
+                <OBACounter name="FR OBA FFE:2"/>
+                <OBACounter name="FR OBA FFE:C"/>
+                <OBACounter name="CH OBA FFE:1"/>
+                <OBACounter name="CH OBA FFE:2"/>
+                <OBACounter name="CH OBA FFE:C"/>
+                <OBACounter name="AL OBA FFE:1"/>
+                <OBACounter name="AL OBA FFE:2"/>
+                <OBACounter name="AL OBA FFE:C"/>
+                <OBACounter name="GE OBA FFE:1"/>
+                <OBACounter name="GE OBA FFE:2"/>
+                <OBACounter name="GE OBA FFE:C"/>
+                <OBACounter name="SS OBA FFE:1"/>
+                <OBACounter name="SS OBA FFE:2"/>
+                <OBACounter name="SS OBA FFE:C"/>
+                <OBACounter name="JA OBA FFE:1"/>
+                <OBACounter name="JA OBA FFE:2"/>
+                <OBACounter name="JA OBA FFE:C"/>
+                <OBACounter name="IT OBA FFE:1"/>
+                <OBACounter name="IT OBA FFE:2"/>
+                <OBACounter name="IT OBA FFE:C"/>
+                <OBACounter name="FI OBA FFE:1"/>
+                <OBACounter name="FI OBA FFE:2"/>
+                <OBACounter name="FI OBA FFE:C"/>
+                <OBACounter name="AX OBA FFE:1"/>
+                <OBACounter name="AX OBA FFE:2"/>
+                <OBACounter name="AX OBA FFE:C"/>
+                <OBACounter name="HU OBA FFE:1"/>
+                <OBACounter name="HU OBA FFE:2"/>
+                <OBACounter name="HU OBA FFE:C"/>
 
-        <!-- These counters should be ignored as they will create false LOS conditions (e.g. treated as hindrances) -->
+                <!-- These counters should be ignored as they will create false LOS conditions (e.g. treated as hindrances) -->
         <ignoreCounter name="Barricade" />
         <ignoreCounter name="Breached Barricade" />
         <ignoreCounter name="Roadblock" />
