@@ -346,8 +346,11 @@ public class GUILOSDataEditor extends LOSDataEditor {
         workSpace.setFont(new Font("Arial", Font.BOLD, 12));
 
         Hex currentHex = null;
+        int heightadj=0;
         for (int x = 0; x < map.getWidth(); x++) {
-            for (int y = 0; y < map.getHeight() + (x % 2); y++) { // add 1 hex if odd
+            // add 1 hex if odd col on all maps except those like RO which have equal rows in every col
+            if(!map.getMapConfiguration().equals(("TopLeftHalfHeightEqualRowCount"))){heightadj = x % 2;}
+            for (int y = 0; y < map.getHeight() + heightadj; y++) {
                 currentHex = map.getHex(x, y);
                 for (int z = 0; z < 6; z++) {
                     if (currentHex.hasSlope(z)) {

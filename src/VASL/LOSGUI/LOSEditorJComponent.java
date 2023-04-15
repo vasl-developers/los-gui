@@ -1746,7 +1746,7 @@ public class LOSEditorJComponent
         }
     }
 
-    public void changeAllTerrain() {
+    public void   changeAllTerrain() {
 
         final boolean changed;
 

@@ -62,7 +62,7 @@ public class LOSEditorProperties {
             // load the properties
             props.load(in);
             LOSEditorHome = props.getProperty("LOSEditorHome");
-            BoardDirectory = props.getProperty("BoardDirectory");
+            BoardDirectory =props.getProperty("BoardDirectory");
             loaded = true;
 
         } catch (Exception e) {

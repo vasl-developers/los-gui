@@ -35,6 +35,7 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 
 import VASL.LOS.GUILOSDataEditor;
+
 import VASL.LOS.Map.Map;
 
 /**
@@ -45,7 +46,6 @@ import VASL.LOS.Map.Map;
  * @version 1.0
  */
 public class LOSEditorJFrame extends JFrame {
-
     // directories
     private String boardDirectory;
 
