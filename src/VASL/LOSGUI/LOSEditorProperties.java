@@ -31,6 +31,7 @@ public class LOSEditorProperties {
     // properties
     private static String LOSEditorHome;
     private static String BoardDirectory;
+    private static String ShardBoardMetadataFileName;
     private static boolean loaded = false;
 
     // getters
@@ -47,7 +48,12 @@ public class LOSEditorProperties {
 
         return BoardDirectory;
     }
+    public static String getShardBoardMetadataFileName() {
 
+        if (!loaded) load();
+
+        return ShardBoardMetadataFileName;
+    }
     public LOSEditorProperties() {
     }
 
@@ -63,6 +69,8 @@ public class LOSEditorProperties {
             props.load(in);
             LOSEditorHome = props.getProperty("LOSEditorHome");
             BoardDirectory =props.getProperty("BoardDirectory");
+            ShardBoardMetadataFileName = props.getProperty("SharedBoardMetadataFileName");
+
             loaded = true;
 
         } catch (Exception e) {

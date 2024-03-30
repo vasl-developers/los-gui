@@ -670,8 +670,107 @@
 		<color name="GrainCrestL5" red="235" green="216" blue="104" terrain="Grain" elevation="5" />
 		<color name="GrainCrestL6" red="235" green="216" blue="105" terrain="Grain" elevation="6" />
 		<color name="GrainCrestMud" red="215" green="208" blue="99" terrain="Grain" elevation="UNKNOWN" />
+		<!-- from bde -->
+		<color name="Grain01" red="173" green="147" blue="53" terrain="Grain" elevation="0" />
+		<color name="Grain02" red="181" green="156" blue="67" terrain="Grain" elevation="0" />
+		<color name="Grain03" red="186" green="158" blue="58" terrain="Grain" elevation="0" />
+		<color name="Grain04" red="191" green="170" blue="67" terrain="Grain" elevation="0" />
+		<color name="Grain05" red="192" green="167" blue="78" terrain="Grain" elevation="0" />
+		<color name="Grain06" red="193" green="154" blue="56" terrain="Grain" elevation="0" />
+		<color name="Grain07" red="194" green="168" blue="45" terrain="Grain" elevation="0" />
+		<color name="Grain08" red="195" green="165" blue="53" terrain="Grain" elevation="0" />
+		<color name="Grain09" red="197" green="167" blue="66" terrain="Grain" elevation="0" />
+		<color name="Grain10" red="200" green="177" blue="87" terrain="Grain" elevation="0" />
+		<color name="Furrows01" red="174" green="147" blue="53" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows02" red="182" green="156" blue="67" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows03" red="194" green="154" blue="56" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows04" red="187" green="158" blue="58" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows05" red="196" green="165" blue="53" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows06" red="195" green="168" blue="45" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows07" red="193" green="167" blue="78" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows08" red="198" green="167" blue="66" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows09" red="192" green="170" blue="67" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows10" red="204" green="177" blue="74" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="Furrows11" red="201" green="177" blue="87" terrain="Open Ground" elevation="UNKNOWN" />
+		<!-- bdf -->
+		<color name="GrainColor01" red="176" green="143" blue="48" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor02" red="182" green="156" blue="66" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor03" red="183" green="152" blue="71" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor04" red="184" green="165" blue="79" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor05" red="186" green="155" blue="58" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor06" red="186" green="155" blue="66" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor07" red="187" green="159" blue="52" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor08" red="190" green="164" blue="73" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor09" red="191" green="149" blue="78" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor10" red="192" green="158" blue="77" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor11" red="193" green="160" blue="92" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainColor12" red="193" green="165" blue="67" terrain="Grain" elevation="UNKNOWN" />
+		<color name="FurrowColor01" red="177" green="143" blue="48" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor02" red="183" green="156" blue="66" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor03" red="184" green="152" blue="71" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor04" red="185" green="165" blue="79" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor05" red="187" green="155" blue="58" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor06" red="187" green="155" blue="66" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor07" red="188" green="159" blue="52" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor08" red="191" green="164" blue="73" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor09" red="192" green="149" blue="78" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor10" red="193" green="158" blue="77" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor11" red="194" green="160" blue="92" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowColor12" red="194" green="165" blue="67" terrain="Open Ground" elevation="UNKNOWN" />
+		<!-- bdg -->
+		<color name="GrainC01" red="165" green="144" blue="36" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC02" red="166" green="145" blue="27" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC03" red="167" green="146" blue="14" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC04" red="169" green="150" blue="43" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC05" red="170" green="155" blue="36" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC06" red="172" green="151" blue="34" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC07" red="172" green="156" blue="27" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC08" red="173" green="151" blue="23" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC09" red="175" green="158" blue="17" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC10" red="177" green="154" blue="12" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC11" red="179" green="163" blue="36" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainC12" red="181" green="165" blue="8" terrain="Grain" elevation="UNKNOWN" />
+		<color name="FurrowC01" red="166" green="144" blue="36" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC02" red="167" green="145" blue="27" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC03" red="168" green="146" blue="14" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC04" red="170" green="150" blue="43" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC05" red="171" green="155" blue="36" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC06" red="173" green="151" blue="34" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC07" red="173" green="156" blue="27" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC08" red="174" green="151" blue="23" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC09" red="176" green="158" blue="17" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC10" red="178" green="154" blue="12" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC11" red="180" green="163" blue="36" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowC12" red="182" green="165" blue="8" terrain="Open Ground" elevation="UNKNOWN" />
+		<!-- bdh -->
+		<color name="GrainCo01" red="167" green="132" blue="20" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo02" red="180" green="164" blue="20" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo03" red="181" green="147" blue="27" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo04" red="182" green="155" blue="32" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo05" red="187" green="158" blue="23" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo06" red="187" green="175" blue="29" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo07" red="189" green="161" blue="9" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo08" red="190" green="162" blue="40" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo09" red="191" green="164" blue="0" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo10" red="195" green="169" blue="27" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo11" red="196" green="170" blue="3" terrain="Grain" elevation="UNKNOWN" />
+		<color name="GrainCo12" red="201" green="181" blue="0" terrain="Grain" elevation="UNKNOWN" />
+		<color name="FurrowCo01" red="168" green="132" blue="20" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo02" red="181" green="164" blue="20" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo03" red="182" green="147" blue="27" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo04" red="183" green="155" blue="32" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo05" red="188" green="158" blue="23" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo06" red="188" green="175" blue="29" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo07" red="190" green="161" blue="9" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo08" red="191" green="162" blue="40" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo09" red="192" green="164" blue="0" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo10" red="196" green="169" blue="27" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo11" red="197" green="170" blue="3" terrain="Open Ground" elevation="UNKNOWN" />
+		<color name="FurrowCo12" red="202" green="181" blue="0" terrain="Open Ground" elevation="UNKNOWN" />
+
 		<color name="PlowedFields" red="208" green="177" blue="104" terrain="Plowed Field" elevation="UNKNOWN" />
 		<color name="Furrows" red="135" green="89" blue="9" terrain="Open Ground" elevation="UNKNOWN" />
+
 		<!-- Graveyard  -->
 		<color name="GraveyardWhite1" red="204" green="215" blue="171" terrain="Graveyard" elevation="UNKNOWN" />
 		<color name="GraveyardWhite2" red="164" green="164" blue="132" terrain="Graveyard" elevation="UNKNOWN" />
@@ -760,6 +859,33 @@
 		<color name="SeparatedSwampBrownL0" red="53" green="2" blue="22" terrain="Marsh" elevation="0" />
 		<color name="MudflatL0" red="127" green="91" blue="41" terrain="Open Ground" elevation="0" />
 		<color name="MudflatL_1" red="127" green="90" blue="41" terrain="Open Ground" elevation="-1" />
+		<!-- bdg -->
+		<color name="MarshColor1" red="98" green="87" blue="17" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor2" red="119" green="108" blue="38" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor3" red="121" green="118" blue="25" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor4" red="124" green="113" blue="26" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor5" red="133" green="127" blue="20" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor6" red="133" green="129" blue="35" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor7" red="134" green="137" blue="19" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshColor8" red="155" green="153" blue="65" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="SwampColor1" red="99" green="87" blue="17" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor2" red="120" green="108" blue="38" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor3" red="122" green="118" blue="25" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor4" red="125" green="113" blue="26" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor5" red="134" green="127" blue="20" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor6" red="134" green="129" blue="35" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor7" red="135" green="137" blue="19" terrain="Swamp" elevation="UNKNOWN" />
+		<color name="SwampColor8" red="156" green="153" blue="65" terrain="Swamp" elevation="UNKNOWN" />
+		<!-- bdh -->
+		<color name="MarshCo1" red="60" green="36" blue="7" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo2" red="81" green="57" blue="16" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo3" red="91" green="68" blue="12" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo4" red="102" green="80" blue="22" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo5" red="105" green="86" blue="15" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo6" red="114" green="99" blue="19" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo7" red="119" green="107" blue="7" terrain="Marsh" elevation="UNKNOWN" />
+		<color name="MarshCo8" red="125" green="117" blue="21" terrain="Marsh" elevation="UNKNOWN" />
+
 		<!-- Miscellaneous  -->
 		<color name="Black" red="0" green="0" blue="0" terrain="UNKNOWN" elevation="UNKNOWN" />
 		<color name="WhiteHexNumbers" red="251" green="252" blue="253" terrain="UNKNOWN" elevation="UNKNOWN" />
@@ -772,6 +898,7 @@
 		<color name="White" red="255" green="255" blue="255" terrain="UNKNOWN" elevation="UNKNOWN" />
 		<color name="DuttyWhiteHexDots" red="255" green="254" blue="253" terrain="UNKNOWN" elevation="UNKNOWN" />
 		<color name="SnowHexDots" red="168" green="182" blue="203" terrain="UNKNOWN" elevation="UNKNOWN" />
+		<color name="SnowHexDots2" red="175" green="184" blue="160" terrain="UNKNOWN" elevation="UNKNOWN" />
 		<color name="VineyardGreen" red="84" green="100" blue="45" terrain="Vineyard" elevation="UNKNOWN" />
 		<color name="Slope" red="121" green="89" blue="57" terrain="UNKNOWN" elevation="UNKNOWN" />
 		<!-- Open Ground  -->
@@ -794,6 +921,37 @@
 		<color name="L_1Winter" red="213" green="224" blue="194" terrain="Open Ground" elevation="-1" />
 		<color name="L_2Winter" red="225" green="239" blue="187" terrain="Open Ground" elevation="-2" />
 		<color name="Level1Winter" red="222" green="213" blue="188" terrain="Open Ground" elevation="1" />
+		<!-- deluxe board e -->
+		<color name="OGL1_01" red="137" green="70" blue="26" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_02" red="150" green="91" blue="33" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_03" red="152" green="114" blue="34" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_04" red="157" green="117" blue="52" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_05" red="162" green="89" blue="38" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_06" red="163" green="90" blue="50" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_07" red="164" green="109" blue="37" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_08" red="164" green="80" blue="41" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_09" red="166" green="112" blue="53" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_10" red="168" green="109" blue="66" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_11" red="170" green="103" blue="50" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_12" red="170" green="108" blue="53" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_13" red="173" green="133" blue="72" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_14" red="178" green="121" blue="66" terrain="Open Ground" elevation="1" />
+		<color name="OGL1_15" red="180" green="106" blue="59" terrain="Open Ground" elevation="1" />
+		<color name="OGL2_01" red="135" green="70" blue="35" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_02" red="137" green="71" blue="28" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_03" red="140" green="64" blue="34" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_04" red="143" green="58" blue="32" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_05" red="143" green="66" blue="28" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_06" red="148" green="61" blue="28" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_07" red="148" green="83" blue="41" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_08" red="150" green="83" blue="32" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_09" red="151" green="77" blue="39" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_10" red="154" green="73" blue="38" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_11" red="154" green="74" blue="31" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_12" red="157" green="70" blue="30" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_13" red="157" green="70" blue="37" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_14" red="160" green="66" blue="35" terrain="Open Ground" elevation="2" />
+		<color name="OGL2_15" red="167" green="89" blue="51" terrain="Open Ground" elevation="2" />
 		<!-- Orchards  -->
 		<color name="OrchL_2" red="85" green="100" blue="46" terrain="Orchard" elevation="-2" />
 		<color name="OrchL_1" red="83" green="98" blue="45" terrain="Orchard" elevation="-1" />
@@ -829,9 +987,30 @@
 		<color name="RailBed1" red="201" green="197" blue="197" terrain="Railroad, Ground Level" elevation="UNKNOWN" />
 		<color name="RailBed2" red="144" green="142" blue="142" terrain="Railroad, Ground Level" elevation="UNKNOWN" />
 		<color name="RailBed3" red="107" green="105" blue="105" terrain="Railroad, Ground Level" elevation="UNKNOWN" />
+
+		<color name="ERails1" red="120" green="122" blue="127" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERails2" red="60" green="60" blue="61" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERailTies" red="110" green="69" blue="49" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERailBed1" red="201" green="197" blue="196" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERailBed2" red="168" green="167" blue="166" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERailBed3" red="107" green="105" blue="104" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERoad1" red="146" green="110" blue="31" terrain="Railroad, Elevated" elevation="1" />
+		<color name="ERoad2" red="94" green="57" blue="24" terrain="Railroad, Elevated" elevation="1" />
+
+		<color name="SRails1" red="120" green="122" blue="128" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SRails2" red="60" green="62" blue="60" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SRailTies" red="108" green="70" blue="52" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SRailBed1" red="204" green="198" blue="196" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SRailBed2" red="148" green="142" blue="140" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SRailBed3" red="108" green="106" blue="108" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SSunkRoad1" red="148" green="110" blue="28" terrain="Railroad, Sunken" elevation="-1" />
+		<color name="SSunkRoad2" red="92" green="58" blue="20" terrain="Railroad, Sunken" elevation="-1" />
 		<!-- Rice Paddies  -->
 		<color name="RicePaddy" red="103" green="75" blue="39" terrain="Rice Paddy, Irrigated" elevation="UNKNOWN" />
 		<color name="PaddyInterior" red="174" green="168" blue="78" terrain="Rice Paddy, Irrigated" elevation="UNKNOWN" />
+		<!-- Rubble  -->
+		<color name="StoneRubble" red="115" green="115" blue="116" terrain="Stone Rubble" elevation="0" />
+		<color name="WoodRubble" red="181" green="125" blue="60" terrain="Wooden Rubble" elevation="UNKNOWN" />
 		<!-- Shellholes  -->
 		<color name="Shellhole1" red="177" green="136" blue="57" terrain="Shellholes" elevation="UNKNOWN" />
 		<color name="Shellhole2" red="97" green="68" blue="27" terrain="Shellholes" elevation="UNKNOWN" />
@@ -852,6 +1031,8 @@
 		<color name="StoneBldg13" red="205" green="205" blue="205" terrain="Stone Building" elevation="UNKNOWN" />
 		<color name="StoneBldg14" red="220" green="220" blue="220" terrain="Stone Building" elevation="UNKNOWN" />
 		<color name="StoneBldg15" red="235" green="235" blue="235" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldg16" red="135" green="135" blue="135" terrain="Stone Building, 1 Level" elevation="UNKNOWN" />
+		<color name="StoneBldg17" red="126" green="126" blue="126" terrain="Stone Building, 2 Level" elevation="UNKNOWN" />
 		<color name="StoneStairwell" red="251" green="254" blue="255" terrain="Stone Building" elevation="UNKNOWN" />
 		<color name="StoneRowhouseBar" red="1" green="1" blue="0" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
 		<color name="StoneBldg1Winter" red="90" green="90" blue="90" terrain="Stone Building" elevation="UNKNOWN" />
@@ -870,6 +1051,99 @@
 		<color name="StoneBldg14Winter" red="231" green="231" blue="231" terrain="Stone Building" elevation="UNKNOWN" />
 		<color name="StoneBldg15Winter" red="247" green="247" blue="247" terrain="Stone Building" elevation="UNKNOWN" />
 		<color name="StoneRowhouseBarWinter" red="71" green="70" blue="70" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
+		<!-- bde -->
+		<color name="StoneBldge1" red="42" green="35" blue="20" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge2" red="52" green="41" blue="14" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge3" red="63" green="54" blue="37" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge4" red="69" green="54" blue="27" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge5" red="77" green="70" blue="56" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge6" red="79" green="67" blue="26" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge7" red="84" green="69" blue="43" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge8" red="85" green="62" blue="28" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge9" red="96" green="87" blue="68" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge10" red="100" green="86" blue="54" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge11" red="101" green="89" blue="40" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge12" red="114" green="104" blue="84" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge13" red="116" green="104" blue="73" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge14" red="128" green="118" blue="87" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldge15" red="128" green="120" blue="100" terrain="Stone Building" elevation="0" />
+		<!-- bdf -->
+		<color name="StoneBldgf1" red="39" green="30" blue="16" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf2" red="51" green="40" blue="12" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf3" red="59" green="31" blue="20" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf4" red="68" green="52" blue="29" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf5" red="81" green="65" blue="27" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf6" red="86" green="54" blue="40" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf7" red="86" green="68" blue="44" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf8" red="92" green="58" blue="32" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf9" red="103" green="86" blue="60" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf10" red="103" green="87" blue="74" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf11" red="104" green="88" blue="43" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf12" red="111" green="79" blue="62" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf13" red="119" green="103" blue="78" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf14" red="121" green="104" blue="90" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgf15" red="135" green="120" blue="102" terrain="Stone Building" elevation="UNKNOWN" />
+		<!-- bdg -->
+		<color name="StoneBldgg1" red="59" green="40" blue="19" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg2" red="96" green="75" blue="44" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg3" red="101" green="81" blue="35" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg4" red="113" green="101" blue="21" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg5" red="114" green="101" blue="30" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg6" red="117" green="99" blue="45" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg7" red="118" green="99" blue="59" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg8" red="118" green="100" blue="71" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg9" red="131" green="116" blue="60" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg10" red="133" green="117" blue="72" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg11" red="134" green="119" blue="82" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg12" red="135" green="120" blue="93" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg13" red="147" green="135" blue="85" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg14" red="148" green="135" blue="98" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgg15" red="152" green="140" blue="113" terrain="Stone Building" elevation="UNKNOWN" />
+		<!-- bdh -->
+		<color name="StoneBldgh1" red="59" green="42" blue="10" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh2" red="81" green="62" blue="13" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh3" red="98" green="80" blue="19" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh4" red="115" green="97" blue="32" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh5" red="119" green="101" blue="20" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh6" red="125" green="123" blue="37" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh7" red="131" green="117" blue="48" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh8" red="133" green="117" blue="36" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh9" red="135" green="109" blue="31" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh10" red="135" green="118" blue="25" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh11" red="138" green="123" blue="19" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh12" red="148" green="136" blue="38" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh13" red="148" green="137" blue="55" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh14" red="148" green="137" blue="65" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgh15" red="160" green="152" blue="70" terrain="Stone Building" elevation="UNKNOWN" />
+		<!-- bdrdx -->
+		<color name="StoneBldgr1" red="19" green="19" blue="18" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr2" red="39" green="42" blue="41" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr3" red="62" green="67" blue="67" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr4" red="66" green="85" blue="55" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr5" red="78" green="84" blue="87" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr6" red="87" green="95" blue="101" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr7" red="93" green="95" blue="91" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr8" red="99" green="108" blue="114" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr9" red="102" green="114" blue="86" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr10" red="111" green="113" blue="110" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr11" red="113" green="122" blue="129" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr12" red="129" green="138" blue="112" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr13" red="126" green="137" blue="149" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr14" red="134" green="138" blue="138" terrain="Stone Building" elevation="UNKNOWN" />
+		<color name="StoneBldgr15" red="156" green="164" blue="166" terrain="Stone Building" elevation="UNKNOWN" />
+		<!-- bdBFPA -->
+		<color name="StoneBldgA1" red="23" green="20" blue="24" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA2" red="4" green="43" blue="57" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA3" red="59" green="69" blue="77" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA4" red="90" green="96" blue="82" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA5" red="88" green="103" blue="121" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA6" red="121" green="127" blue="129" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA7" red="140" green="155" blue="150" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA8" red="158" green="176" blue="190" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA9" red="191" green="187" blue="189" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA10" red="193" green="193" blue="203" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA11" red="194" green="207" blue="215" terrain="Stone Building" elevation="0" />
+		<color name="StoneBldgA12" red="218" green="221" blue="227" terrain="Stone Building" elevation="0" />
 		<!-- Streams  -->
 		<color name="StreamBrown" red="98" green="61" blue="19" terrain="Shallow Stream" elevation="UNKNOWN" />
 		<color name="StreamGreen1" red="117" green="124" blue="55" terrain="Shallow Stream" elevation="UNKNOWN" />
@@ -890,10 +1164,13 @@
 		<color name="WallBrownWinter" red="177" green="150" blue="121" terrain="Wall" elevation="UNKNOWN" />
 		<!-- Water  -->
 		<color name="Water" red="135" green="190" blue="220" terrain="Water" elevation="-1" />
+		<color name="Water1" red="171" green="231" blue="255" terrain="Water" elevation="-1" />
+		<color name="Surf" red="253" green="255" blue="255" terrain="Water" elevation="-1" />
 		<color name="WaterWhite" red="214" green="230" blue="230" terrain="Water" elevation="-1" />
 		<color name="Ice" red="200" green="230" blue="230" terrain="Water" elevation="-1" />
 		<color name="PondWater" red="135" green="190" blue="221" terrain="Water" elevation="-1" />
 		<color name="PondWhite" red="215" green="230" blue="230" terrain="Water" elevation="-1" />
+
 		<!-- Wooden Building  -->
 		<color name="WoodBldg1" red="15" green="10" blue="5" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodBldg2" red="30" green="21" blue="10" terrain="Wooden Building" elevation="UNKNOWN" />
@@ -910,6 +1187,7 @@
 		<color name="WoodBldg13" red="194" green="135" blue="66" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodBldg14" red="199" green="145" blue="81" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodBldg15" red="204" green="154" blue="96" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldg16" red="80" green="62" blue="30" terrain="Wooden Building, 1 Level" elevation="UNKNOWN" />
 		<color name="WoodStairwell" red="250" green="254" blue="255" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodRowhouseBar" red="2" green="1" blue="0" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
 		<color name="WoodBldg1Winter" red="123" green="90" blue="66" terrain="Wooden Building" elevation="UNKNOWN" />
@@ -928,11 +1206,73 @@
 		<color name="WoodBldg14Winter" red="206" green="181" blue="165" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodBldg15Winter" red="206" green="189" blue="165" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="WoodRowhouseBarWinter" red="72" green="70" blue="70" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
-		<!-- Woods  -->
+		<!-- bdg -->
+		<color name="WoodBldgg1" red="83" green="51" blue="35" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg2" red="86" green="58" blue="29" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg3" red="96" green="56" blue="33" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg4" red="105" green="74" blue="40" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg5" red="108" green="67" blue="42" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg6" red="112" green="69" blue="36" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg7" red="117" green="75" blue="47" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg8" red="119" green="68" blue="45" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg9" red="122" green="77" blue="42" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg10" red="124" green="90" blue="49" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg11" red="125" green="72" blue="42" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg12" red="128" green="71" blue="49" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg13" red="130" green="72" blue="43" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg14" red="135" green="86" blue="50" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgg15" red="139" green="80" blue="48" terrain="Wooden Building" elevation="UNKNOWN" />
+		<!-- bdh -->
+		<color name="WoodBldgh1" red="59" green="33" blue="12" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh2" red="70" green="41" blue="9" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh3" red="78" green="54" blue="14" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh4" red="82" green="49" blue="17" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh5" red="87" green="53" blue="12" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh6" red="90" green="69" blue="18" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh7" red="96" green="64" blue="21" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh8" red="99" green="67" blue="10" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh9" red="108" green="84" blue="27" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh10" red="109" green="86" blue="17" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh11" red="110" green="78" blue="26" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh12" red="122" green="100" blue="23" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh13" red="122" green="97" blue="38" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh14" red="123" green="99" blue="32" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgh15" red="132" green="111" blue="39" terrain="Wooden Building" elevation="UNKNOWN" />
+		<!-- bdrdx -->
+		<color name="WoodBldgr1" red="33" green="27" blue="19" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr2" red="54" green="34" blue="16" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr3" red="66" green="50" blue="35" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr4" red="77" green="50" blue="26" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr5" red="93" green="61" blue="33" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr6" red="92" green="64" blue="45" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr7" red="105" green="67" blue="27" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr8" red="105" green="69" blue="40" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr9" red="120" green="81" blue="54" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr10" red="124" green="84" blue="45" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr11" red="133" green="84" blue="48" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr12" red="147" green="99" blue="57" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr13" red="111" green="109" blue="109" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr14" red="155" green="104" blue="52" terrain="Wooden Building" elevation="UNKNOWN" />
+		<color name="WoodBldgr15" red="170" green="119" blue="63" terrain="Wooden Building" elevation="UNKNOWN" />
+		<!-- bdBFPA -->
+		<color name="WoodBldgA1" red="49" green="36" blue="35" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA2" red="73" green="55" blue="47" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA3" red="91" green="70" blue="58" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA4" red="95" green="47" blue="46" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA5" red="116" green="74" blue="59" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA6" red="120" green="52" blue="48" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA7" red="148" green="63" blue="51" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA8" red="155" green="80" blue="60" terrain="Wooden Building" elevation="0" />
+		<color name="WoodBldgA9" red="165" green="71" blue="54" terrain="Wooden Building" elevation="0" />
+		<!-- Woods and Jungle  -->
 		<color name="WoodsGreen" red="85" green="95" blue="45" terrain="Woods" elevation="UNKNOWN" />
 		<color name="WoodsBlack" red="44" green="42" blue="22" terrain="Woods" elevation="UNKNOWN" />
+		<!-- use next two for overlays -->
+		<color name="WoodsGreenL1" red="85" green="95" blue="46" terrain="Woods" elevation="1" />
+		<color name="WoodsBlackL1" red="44" green="42" blue="24" terrain="Woods" elevation="1" />
 		<color name="WoodsGreenWinter" red="166" green="171" blue="145" terrain="Woods" elevation="UNKNOWN" />
 		<color name="WoodsBlackWinter" red="94" green="90" blue="75" terrain="Woods" elevation="UNKNOWN" />
+		<color name="DenseJungleGreen" red="85" green="95" blue="46" terrain="Dense Jungle" elevation="UNKNOWN" />
 		<!-- Mud  -->
 		<color name="MudOrchard" red="65" green="90" blue="48" terrain="Orchard" elevation="UNKNOWN" />
 		<color name="MudBrush" red="138" green="149" blue="89" terrain="Brush" elevation="UNKNOWN" />
@@ -1008,6 +1348,22 @@
 		<color name="Hammada2" red="210" green="210" blue="210" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Scrub1" red="119" green="70" blue="0" terrain="Scrub" elevation="UNKNOWN" />
 		<color name="Scrub2" red="102" green="109" blue="45" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub3" red="152" green="155" blue="115" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub3L_1" red="152" green="155" blue="114" terrain="Scrub" elevation="-1" />
+		<color name="Scrub4" red="164" green="142" blue="104" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub4L_1" red="164" green="142" blue="103" terrain="Scrub" elevation="-1" />
+		<color name="Scrub5" red="172" green="153" blue="118" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub5L_1" red="172" green="153" blue="117" terrain="Scrub" elevation="-1" />
+		<color name="Scrub6" red="142" green="142" blue="102" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub6L_1" red="142" green="142" blue="103" terrain="Scrub" elevation="-1" />
+		<color name="Scrub6L_1" red="142" green="142" blue="104" terrain="Scrub" elevation="-1" />
+		<color name="Scrub7" red="173" green="171" blue="165" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub7L_1" red="173" green="171" blue="164" terrain="Scrub" elevation="-1" />
+		<color name="Scrub8" red="164" green="159" blue="112" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub8L_1" red="164" green="159" blue="111" terrain="Scrub" elevation="-1" />
+		<color name="Scrub9" red="162" green="155" blue="128" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub10" red="145" green="142" blue="133" terrain="Scrub" elevation="UNKNOWN" />
+		<color name="Scrub10L_10" red="145" green="142" blue="132" terrain="Scrub" elevation="-1" />
 		<color name="CactusTan" red="222" green="189" blue="99" terrain="Cactus Patch" elevation="UNKNOWN" />
 		<color name="CactusGreen" red="123" green="132" blue="8" terrain="Cactus Patch" elevation="UNKNOWN" />
 		<color name="CactusBrown" red="90" green="66" blue="33" terrain="Cactus Patch" elevation="UNKNOWN" />
@@ -1019,6 +1375,11 @@
 		<color name="Hammada3" red="148" green="113" blue="38" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Hammada4" red="123" green="92" blue="27" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Hammada5" red="108" green="75" blue="16" terrain="Hammada" elevation="UNKNOWN" />
+		<color name="Hammada1Winter" red="136" green="139" blue="135" terrain="Hammada" elevation="UNKNOWN" />
+		<color name="Hammada2Winter" red="108" green="112" blue="106" terrain="Hammada" elevation="UNKNOWN" />
+		<color name="Hammada3Winter" red="170" green="171" blue="169" terrain="Hammada" elevation="UNKNOWN" />
+		<color name="Hammada4Winter" red="200" green="201" blue="199" terrain="Hammada" elevation="UNKNOWN" />
+		<color name="Hammada5Winter" red="80" green="83" blue="77" terrain="Hammada" elevation="UNKNOWN" />
 		<color name="Scrub_1" red="189" green="165" blue="51" terrain="Scrub" elevation="UNKNOWN" />
 		<color name="Scrub_2" red="168" green="141" blue="34" terrain="Scrub" elevation="UNKNOWN" />
 		<color name="Scrub_3" red="148" green="126" blue="37" terrain="Scrub" elevation="UNKNOWN" />
@@ -1034,6 +1395,7 @@
 		<color name="WadiBrown3" red="127" green="91" blue="33" terrain="Wadi" elevation="UNKNOWN" />
 		<color name="WadiBlack" red="83" green="51" blue="37" terrain="Wadi" elevation="UNKNOWN" />
 		<color name="WadiCliff" red="65" green="54" blue="28" terrain="Cliff" elevation="UNKNOWN" />
+		<color name="DTO_BrushL_1" red="161" green="160" blue="56" terrain="Brush" elevation="0" />
 		<color name="DTO_BrushL0" red="161" green="161" blue="56" terrain="Brush" elevation="0" />
 		<color name="DTO_BrushL1" red="161" green="162" blue="56" terrain="Brush" elevation="1" />
 		<color name="DTO_BrushL2" red="161" green="163" blue="56" terrain="Brush" elevation="2" />
@@ -1059,6 +1421,9 @@
 		<color name="DTO_DirtRdL4" red="229" green="201" blue="130" terrain="Dirt Road" elevation="4" />
 		<color name="DTO_DirtRdL5" red="229" green="201" blue="131" terrain="Dirt Road" elevation="5" />
 		<color name="DTO_DirtRdL6" red="229" green="201" blue="132" terrain="Dirt Road" elevation="6" />
+		<color name="DTO_DirtRdL0Winter1" red="235" green="231" blue="205" terrain="Dirt Road" elevation="0" />
+		<color name="DTO_DirtRdL0Winter2" red="233" green="230" blue="204" terrain="Dirt Road" elevation="0" />
+		<color name="DTO_DirtRdL_1Winter" red="228" green="228" blue="202" terrain="Dirt Road" elevation="-1" />
 		<color name="DTO_DirtRdBridge" red="229" green="200" blue="126" terrain="Dirt Road" elevation="UNKNOWN" />
 		<color name="DTO_GraveyardGreen" red="130" green="128" blue="58" terrain="Graveyard" elevation="UNKNOWN" />
 		<color name="DTO_GraveyardShadow" red="102" green="98" blue="40" terrain="Graveyard" elevation="UNKNOWN" />
@@ -1071,6 +1436,12 @@
 		<color name="DTO_PavedRdL5" red="193" green="198" blue="193" terrain="Paved Road" elevation="5" />
 		<color name="DTO_PavedRdL6" red="193" green="199" blue="193" terrain="Paved Road" elevation="6" />
 		<color name="DTO_PavedRdBridge" red="193" green="193" blue="192" terrain="Paved Road" elevation="UNKNOWN" />
+		<color name="DTO_Level_1_1" red="204" green="174" blue="32" terrain="Open Ground" elevation="-1" />
+		<color name="DTO_Level_1_2" red="183" green="151" blue="25" terrain="Open Ground" elevation="-1" />
+		<color name="DTO_Level_1_3" red="183" green="151" blue="41" terrain="Open Ground" elevation="-1" />
+		<color name="DTO_Level_1_4" red="190" green="154" blue="10" terrain="Open Ground" elevation="-1" />
+		<color name="DTO_Level_1_5" red="166" green="133" blue="20" terrain="Open Ground" elevation="-1" />
+		<color name="DTO_Level_1_6" red="201" green="171" blue="65" terrain="Open Ground" elevation="-1" />
 		<color name="DTO_Level0_1" red="233" green="197" blue="40" terrain="Open Ground" elevation="0" />
 		<color name="DTO_Level0_2" red="232" green="188" blue="0" terrain="Open Ground" elevation="0" />
 		<color name="DTO_Level0_3" red="222" green="181" blue="19" terrain="Open Ground" elevation="0" />
@@ -1081,6 +1452,7 @@
 		<color name="DTO_Level2" red="169" green="131" blue="49" terrain="Open Ground" elevation="2" />
 		<color name="DTO_Level3" red="145" green="107" blue="27" terrain="Open Ground" elevation="3" />
 		<color name="DTO_Level4" red="114" green="83" blue="42" terrain="Open Ground" elevation="4" />
+		<color name="DTO_OrchL_1" red="118" green="113" blue="36" terrain="Orchard" elevation="-1" />
 		<color name="DTO_OrchL0" red="118" green="114" blue="36" terrain="Orchard" elevation="0" />
 		<color name="DTO_OrchL1" red="118" green="115" blue="36" terrain="Orchard" elevation="1" />
 		<color name="DTO_OrchL2" red="118" green="116" blue="36" terrain="Orchard" elevation="2" />
@@ -1131,9 +1503,22 @@
 		<color name="DTO_WoodRowhouseBar" red="4" green="3" blue="4" terrain="Wooden Building" elevation="UNKNOWN" />
 		<color name="DTO_WoodStairwell" red="250" green="251" blue="250" terrain="Rowhouse Wall, 1 Level" elevation="UNKNOWN" />
 
-		<!-- Desert colors for desert overlays -->
+		<!-- Desert colors for desert overlays, including AD terrain -->
 		<color name="Hillock1" red="114" green="83" blue="42" terrain="Hillock Summit" elevation="UNKNOWN" />
 		<color name="Dier" red="252" green="223" blue="89" terrain="Dier" elevation="UNKNOWN" />
+		<color name="Cactus Patch" red="230" green="192" blue="82" terrain="Cactus Patch" elevation="0" />
+		<color name="Cactus Patch1" red="194" green="165" blue="68" terrain="Cactus Patch" elevation="0" />
+		<color name="Cactus Patch2" red="137" green="83" blue="35" terrain="Cactus Patch" elevation="0" />
+		<color name="Cactus Patch3" red="149" green="171" blue="61" terrain="Cactus Patch" elevation="0" />
+		<color name="AD_Debris" red="117" green="98" blue="61" terrain="Debris" elevation="0" />
+		<color name="AD_Stone Rubble" red="100" green="100" blue="100" terrain="Stone Rubble" elevation="0" />
+		<color name="DTO_Shellhole1" red="177" green="135" blue="57" terrain="Shellholes" elevation="-1" />
+		<color name="DTO_Shellhole2" red="97" green="67" blue="27" terrain="Shellholes" elevation="-1" />
+		<color name="DTO_Shellhole3" red="48" green="22" blue="8" terrain="Shellholes" elevation="-1" />
+		<color name="AD_CragGreyWinter" red="200" green="200" blue="194" terrain="Crags" elevation="UNKNOWN" />
+		<color name="AD_CragBlackWinter" red="113" green="113" blue="111" terrain="Crags" elevation="UNKNOWN" />
+		<color name="AD_WinterBlackHexNumbers" red="64" green="64" blue="64" terrain="UNKNOWN" elevation="UNKNOWN" />
+		<color name="AD_Level_1Winter" red="212" green="224" blue="194" terrain="Open Ground" elevation="-1" />
 	</colors>
 
 	<terrainTypes>
@@ -1403,6 +1788,9 @@
 			<colorMap fromColor="WoodStairwell" toColor="WoodBldg6"/>
 			<colorMap fromColor="StoneStairwell" toColor="StoneBldg6"/>
 		</colorSSR>
+		<colorSSR name="AllBuildingsLevel1">
+			<colorMap fromColor="WoodBldg1" toColor="WoodBldg1"/>  // just need one transform to make it work; don't want it to actually change board image so from/to are equal
+		</colorSSR>
 		<colorSSR name="RowhouseBarsToBuildings">
 			<colorMap fromColor="StoneRowhouseBar" toColor="StoneBldg8"/>
 			<colorMap fromColor="WoodRowhouseBar" toColor="WoodBldg8"/>
@@ -1428,6 +1816,48 @@
 			<colorMap fromColor="WoodBldg14" toColor="StoneBldg14"/>
 			<colorMap fromColor="WoodBldg15" toColor="StoneBldg15"/>
 			<colorMap fromColor="WoodStairwell" toColor="StoneStairwell"/>
+			<!-- bdg -->
+			<colorMap fromColor="WoodBldgg1" toColor="StoneBldg1"/>
+			<colorMap fromColor="WoodBldgg2" toColor="StoneBldg2"/>
+			<colorMap fromColor="WoodBldgg3" toColor="StoneBldg3"/>
+			<colorMap fromColor="WoodBldgg4" toColor="StoneBldg4"/>
+			<colorMap fromColor="WoodBldgg5" toColor="StoneBldg5"/>
+			<colorMap fromColor="WoodBldgg6" toColor="StoneBldg6"/>
+			<colorMap fromColor="WoodBldgg7" toColor="StoneBldg7"/>
+			<colorMap fromColor="WoodBldgg8" toColor="StoneBldg8"/>
+			<colorMap fromColor="WoodBldgg9" toColor="StoneBldg9"/>
+			<colorMap fromColor="WoodBldgg10" toColor="StoneBldg10"/>
+			<colorMap fromColor="WoodBldgg11" toColor="StoneBldg11"/>
+			<colorMap fromColor="WoodBldgg12" toColor="StoneBldg12"/>
+			<colorMap fromColor="WoodBldgg13" toColor="StoneBldg13"/>
+			<colorMap fromColor="WoodBldgg14" toColor="StoneBldg14"/>
+			<colorMap fromColor="WoodBldgg15" toColor="StoneBldg15"/>
+			<!-- bdh -->
+			<colorMap fromColor="WoodBldgh1" toColor="StoneBldg1"/>
+			<colorMap fromColor="WoodBldgh2" toColor="StoneBldg2"/>
+			<colorMap fromColor="WoodBldgh3" toColor="StoneBldg3"/>
+			<colorMap fromColor="WoodBldgh4" toColor="StoneBldg4"/>
+			<colorMap fromColor="WoodBldgh5" toColor="StoneBldg5"/>
+			<colorMap fromColor="WoodBldgh6" toColor="StoneBldg6"/>
+			<colorMap fromColor="WoodBldgh7" toColor="StoneBldg7"/>
+			<colorMap fromColor="WoodBldgh8" toColor="StoneBldg8"/>
+			<colorMap fromColor="WoodBldgh9" toColor="StoneBldg9"/>
+			<colorMap fromColor="WoodBldgh10" toColor="StoneBldg10"/>
+			<colorMap fromColor="WoodBldgh11" toColor="StoneBldg11"/>
+			<colorMap fromColor="WoodBldgh12" toColor="StoneBldg12"/>
+			<colorMap fromColor="WoodBldgh13" toColor="StoneBldg13"/>
+			<colorMap fromColor="WoodBldgh14" toColor="StoneBldg14"/>
+			<colorMap fromColor="WoodBldgh15" toColor="StoneBldg15"/>
+			<!-- bdBFPA -->
+			<colorMap fromColor="WoodBldgA1" toColor="StoneBldg1"/>
+			<colorMap fromColor="WoodBldgA2" toColor="StoneBldg2"/>
+			<colorMap fromColor="WoodBldgA3" toColor="StoneBldg3"/>
+			<colorMap fromColor="WoodBldgA4" toColor="StoneBldg4"/>
+			<colorMap fromColor="WoodBldgA5" toColor="StoneBldg5"/>
+			<colorMap fromColor="WoodBldgA6" toColor="StoneBldg6"/>
+			<colorMap fromColor="WoodBldgA7" toColor="StoneBldg7"/>
+			<colorMap fromColor="WoodBldgA8" toColor="StoneBldg8"/>
+			<colorMap fromColor="WoodBldgA9" toColor="StoneBldg9"/>
 		</colorSSR>
 		<colorSSR name="AllWood">
 			<colorMap fromColor="StoneBldg1" toColor="WoodBldg1"/>
@@ -1446,6 +1876,83 @@
 			<colorMap fromColor="StoneBldg14" toColor="WoodBldg14"/>
 			<colorMap fromColor="StoneBldg15" toColor="WoodBldg15"/>
 			<colorMap fromColor="StoneStairwell" toColor="WoodStairwell"/>
+			<!-- bde -->
+			<colorMap fromColor="StoneBldge1" toColor="WoodBldg1"/>
+			<colorMap fromColor="StoneBldge2" toColor="WoodBldg2"/>
+			<colorMap fromColor="StoneBldge3" toColor="WoodBldg3"/>
+			<colorMap fromColor="StoneBldge4" toColor="WoodBldg4"/>
+			<colorMap fromColor="StoneBldge5" toColor="WoodBldg5"/>
+			<colorMap fromColor="StoneBldge6" toColor="WoodBldg6"/>
+			<colorMap fromColor="StoneBldge7" toColor="WoodBldg7"/>
+			<colorMap fromColor="StoneBldge8" toColor="WoodBldg8"/>
+			<colorMap fromColor="StoneBldge9" toColor="WoodBldg9"/>
+			<colorMap fromColor="StoneBldge10" toColor="WoodBldg10"/>
+			<colorMap fromColor="StoneBldge11" toColor="WoodBldg11"/>
+			<colorMap fromColor="StoneBldge12" toColor="WoodBldg12"/>
+			<colorMap fromColor="StoneBldge13" toColor="WoodBldg13"/>
+			<colorMap fromColor="StoneBldge14" toColor="WoodBldg14"/>
+			<colorMap fromColor="StoneBldge15" toColor="WoodBldg15"/>
+			<!-- bdf -->
+			<colorMap fromColor="StoneBldgf1" toColor="WoodBldg1"/>
+			<colorMap fromColor="StoneBldgf2" toColor="WoodBldg2"/>
+			<colorMap fromColor="StoneBldgf3" toColor="WoodBldg3"/>
+			<colorMap fromColor="StoneBldgf4" toColor="WoodBldg4"/>
+			<colorMap fromColor="StoneBldgf5" toColor="WoodBldg5"/>
+			<colorMap fromColor="StoneBldgf6" toColor="WoodBldg6"/>
+			<colorMap fromColor="StoneBldgf7" toColor="WoodBldg7"/>
+			<colorMap fromColor="StoneBldgf8" toColor="WoodBldg8"/>
+			<colorMap fromColor="StoneBldgf9" toColor="WoodBldg9"/>
+			<colorMap fromColor="StoneBldgf10" toColor="WoodBldg10"/>
+			<colorMap fromColor="StoneBldgf11" toColor="WoodBldg11"/>
+			<colorMap fromColor="StoneBldgf12" toColor="WoodBldg12"/>
+			<colorMap fromColor="StoneBldgf13" toColor="WoodBldg13"/>
+			<colorMap fromColor="StoneBldgf14" toColor="WoodBldg14"/>
+			<colorMap fromColor="StoneBldgf15" toColor="WoodBldg15"/>
+			<!-- bdg -->
+			<colorMap fromColor="StoneBldgg1" toColor="WoodBldg1"/>
+			<colorMap fromColor="StoneBldgg2" toColor="WoodBldg2"/>
+			<colorMap fromColor="StoneBldgg3" toColor="WoodBldg3"/>
+			<colorMap fromColor="StoneBldgg4" toColor="WoodBldg4"/>
+			<colorMap fromColor="StoneBldgg5" toColor="WoodBldg5"/>
+			<colorMap fromColor="StoneBldgg6" toColor="WoodBldg6"/>
+			<colorMap fromColor="StoneBldgg7" toColor="WoodBldg7"/>
+			<colorMap fromColor="StoneBldgg8" toColor="WoodBldg8"/>
+			<colorMap fromColor="StoneBldgg9" toColor="WoodBldg9"/>
+			<colorMap fromColor="StoneBldgg10" toColor="WoodBldg10"/>
+			<colorMap fromColor="StoneBldgg11" toColor="WoodBldg11"/>
+			<colorMap fromColor="StoneBldgg12" toColor="WoodBldg12"/>
+			<colorMap fromColor="StoneBldgg13" toColor="WoodBldg13"/>
+			<colorMap fromColor="StoneBldgg14" toColor="WoodBldg14"/>
+			<colorMap fromColor="StoneBldgg15" toColor="WoodBldg15"/>
+			<!-- bdh -->
+			<colorMap fromColor="StoneBldgh1" toColor="WoodBldg1"/>
+			<colorMap fromColor="StoneBldgh2" toColor="WoodBldg2"/>
+			<colorMap fromColor="StoneBldgh3" toColor="WoodBldg3"/>
+			<colorMap fromColor="StoneBldgh4" toColor="WoodBldg4"/>
+			<colorMap fromColor="StoneBldgh5" toColor="WoodBldg5"/>
+			<colorMap fromColor="StoneBldgh6" toColor="WoodBldg6"/>
+			<colorMap fromColor="StoneBldgh7" toColor="WoodBldg7"/>
+			<colorMap fromColor="StoneBldgh8" toColor="WoodBldg8"/>
+			<colorMap fromColor="StoneBldgh9" toColor="WoodBldg9"/>
+			<colorMap fromColor="StoneBldgh10" toColor="WoodBldg10"/>
+			<colorMap fromColor="StoneBldgh11" toColor="WoodBldg11"/>
+			<colorMap fromColor="StoneBldgh12" toColor="WoodBldg12"/>
+			<colorMap fromColor="StoneBldgh13" toColor="WoodBldg13"/>
+			<colorMap fromColor="StoneBldgh14" toColor="WoodBldg14"/>
+			<colorMap fromColor="StoneBldgh15" toColor="WoodBldg15"/>
+			<!-- bdBFPA -->
+			<colorMap fromColor="StoneBldgA1" toColor="WoodBldg1"/>
+			<colorMap fromColor="StoneBldgA2" toColor="WoodBldg2"/>
+			<colorMap fromColor="StoneBldgA3" toColor="WoodBldg3"/>
+			<colorMap fromColor="StoneBldgA4" toColor="WoodBldg4"/>
+			<colorMap fromColor="StoneBldgA5" toColor="WoodBldg5"/>
+			<colorMap fromColor="StoneBldgA6" toColor="WoodBldg6"/>
+			<colorMap fromColor="StoneBldgA7" toColor="WoodBldg7"/>
+			<colorMap fromColor="StoneBldgA8" toColor="WoodBldg8"/>
+			<colorMap fromColor="StoneBldgA9" toColor="WoodBldg9"/>
+			<colorMap fromColor="StoneBldgA10" toColor="WoodBldg10"/>
+			<colorMap fromColor="StoneBldgA11" toColor="WoodBldg11"/>
+			<colorMap fromColor="StoneBldgA12" toColor="WoodBldg12"/>
 		</colorSSR>
 		<colorSSR name="BrushToOpenGround">
 			<colorMap fromColor="BrushL0" toColor="Level0"/>
@@ -1567,30 +2074,126 @@
 			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level0"/>
 			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="MarshBrownL_2" toColor="Level_2"/>
+			<colorMap fromColor="MarshBrownL1" toColor="Level1"/>
+			<colorMap fromColor="MarshGreenL_2" toColor="Level_2"/>
+			<colorMap fromColor="MarshGreenL1" toColor="Level1"/>
+			<colorMap fromColor="SeparatedMarshGreenL_2" toColor="Level_2"/>
+			<colorMap fromColor="SeparatedMarshBrownL_2" toColor="Level_2"/>
 		</colorSSR>
 		<colorSSR name="MarshToLevel_1">
 			<colorMap fromColor="MarshGreenL0" toColor="Level_1"/>
 			<colorMap fromColor="MarshBrownL0" toColor="Level_1"/>
 			<colorMap fromColor="MarshGreenL_1" toColor="Level_1"/>
 			<colorMap fromColor="MarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampBrownL_1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshGreenL1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshBrownL1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="MarshBrownL_2" toColor="Level_1"/>
+			<colorMap fromColor="MarshBrownL1" toColor="Level_1"/>
+			<colorMap fromColor="MarshGreenL_2" toColor="Level_1"/>
+			<colorMap fromColor="MarshGreenL1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshGreenL_2" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshBrownL_2" toColor="Level_1"/>
+		</colorSSR>
+		<colorSSR name="MarshToWater">
+			<colorMap fromColor="MarshGreenL0" toColor="Water"/>
+			<colorMap fromColor="MarshBrownL0" toColor="Water"/>
+			<colorMap fromColor="MarshGreenL_1" toColor="Water"/>
+			<colorMap fromColor="MarshBrownL_1" toColor="Water"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Water"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Water"/>
+			<colorMap fromColor="StreamMarshGreenL_1" toColor="Water"/>
+			<colorMap fromColor="StreamMarshBrownL_1" toColor="Water"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Water"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Water"/>
+			<colorMap fromColor="StreamSwampGreenL_1" toColor="Water"/>
+			<colorMap fromColor="StreamSwampBrownL_1" toColor="Water"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Water"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Water"/>
+			<colorMap fromColor="RiverMarshGreenL_1" toColor="Water"/>
+			<colorMap fromColor="RiverMarshBrownL_1" toColor="Water"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Water"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Water"/>
+			<colorMap fromColor="RiverSwampGreenL_1" toColor="Water"/>
+			<colorMap fromColor="RiverSwampBrownL_1" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshGreenL1" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshBrownL1" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Water"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Water"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Water"/>
+			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Water"/>
+			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Water"/>
+			<colorMap fromColor="MarshBrownL_2" toColor="Water"/>
+			<colorMap fromColor="MarshBrownL1" toColor="Water"/>
+			<colorMap fromColor="MarshGreenL_2" toColor="Water"/>
+			<colorMap fromColor="MarshGreenL1" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshGreenL_2" toColor="Water"/>
+			<colorMap fromColor="SeparatedMarshBrownL_2" toColor="Water"/>
 		</colorSSR>
 		<colorSSR name="MarshToLevel0">
 			<colorMap fromColor="MarshGreenL0" toColor="Level0"/>
 			<colorMap fromColor="MarshBrownL0" toColor="Level0"/>
 			<colorMap fromColor="MarshGreenL_1" toColor="Level0"/>
 			<colorMap fromColor="MarshBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshGreenL_1" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampGreenL_1" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshGreenL_1" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampGreenL_1" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampBrownL_1" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshGreenL1" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshBrownL1" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Level0"/>
+			<colorMap fromColor="MarshBrownL_2" toColor="Level0"/>
+			<colorMap fromColor="MarshBrownL1" toColor="Level0"/>
+			<colorMap fromColor="MarshGreenL_2" toColor="Level0"/>
+			<colorMap fromColor="MarshGreenL1" toColor="Level0"/>
+			<colorMap fromColor="SeparatedMarshGreenL_2" toColor="Level0"/>
+			<colorMap fromColor="SeparatedMarshBrownL_2" toColor="Level0"/>
 		</colorSSR>
 
 		<colorSSR name="MarshToLevel1">
@@ -1598,24 +2201,102 @@
 			<colorMap fromColor="MarshBrownL0" toColor="Level1"/>
 			<colorMap fromColor="MarshGreenL_1" toColor="Level1"/>
 			<colorMap fromColor="MarshBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshGreenL_1" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampGreenL_1" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshGreenL_1" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampGreenL_1" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampBrownL_1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshGreenL1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshBrownL1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level1"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Level1"/>
+			<colorMap fromColor="MarshBrownL_2" toColor="Level1"/>
+			<colorMap fromColor="MarshBrownL1" toColor="Level1"/>
+			<colorMap fromColor="MarshGreenL_2" toColor="Level1"/>
+			<colorMap fromColor="MarshGreenL1" toColor="Level1"/>
+			<colorMap fromColor="SeparatedMarshGreenL_2" toColor="Level1"/>
+			<colorMap fromColor="SeparatedMarshBrownL_2" toColor="Level1"/>
 		</colorSSR>
 		<colorSSR name="Marsh_1ToLevel_1">
 			<colorMap fromColor="MarshGreenL_1" toColor="Level_1"/>
 			<colorMap fromColor="MarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampBrownL_1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshGreenL_1" toColor="Level_1"/>
 			<colorMap fromColor="SeparatedMarshBrownL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampGreenL_1" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampBrownL_1" toColor="Level_1"/>
 		</colorSSR>
 		<colorSSR name="Marsh0ToLevel0">
 			<colorMap fromColor="MarshGreenL0" toColor="Level0"/>
 			<colorMap fromColor="MarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level0"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level0"/>
 			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level0"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level0"/>
+		</colorSSR>
+		<colorSSR name="Marsh0ToLevel1">
+			<colorMap fromColor="MarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="MarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level1"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level1"/>
+		</colorSSR>
+		<colorSSR name="Marsh0ToLevel_1">
+			<colorMap fromColor="MarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="MarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamMarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="StreamSwampBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverMarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="RiverSwampBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedMarshBrownL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampGreenL0" toColor="Level_1"/>
+			<colorMap fromColor="SeparatedSwampBrownL0" toColor="Level_1"/>
 		</colorSSR>
 		<colorSSR name="GulliesToStreams">
 			<colorMap fromColor="GullyGreen2" toColor="StreamGreen2"/>
@@ -2396,11 +3077,12 @@
         <LOSSSRule name="Bamboo" type="customCode" fromValue="" toValue="" />
         <LOSSSRule name="RoadsToPaths" type="customCode" fromValue="" toValue="" />
         <LOSSSRule name="NoWoodsRoads" type="customCode" fromValue="" toValue="" />
-
+		<LOSSSRule name="AllBuildingsLevel1" type="customCode" fromValue="" toValue="" />
         <!-- simple terrain mappings -->
         <LOSSSRule name="BrushToOpenGround" type="terrainMap" fromValue="Brush" toValue="Open Ground" />
         <LOSSSRule name="SwampToMarsh" type="terrainMap" fromValue="Swamp" toValue="Marsh" />
         <LOSSSRule name="MarshToOpenGround" type="terrainMap" fromValue="Marsh" toValue="Open Ground" />
+		<LOSSSRule name="MarshToWater" type="terrainMap" fromValue="Marsh" toValue="Water" />
         <LOSSSRule name="FloodedStreams" type="terrainMap" fromValue="Shallow Stream" toValue="Flooded Stream" />
         <LOSSSRule name="DryStreams" type="terrainMap" fromValue="Shallow Stream" toValue="Dry Stream" />
         <LOSSSRule name="OrchardOutOfSeason" type="terrainMap" fromValue="Orchard" toValue="Orchard, Out of Season" />
@@ -2417,6 +3099,7 @@
         <LOSSSRule name="WallsToBocage" type="terrainMap" fromValue="Wall" toValue="Bocage" />
         <LOSSSRule name="HedgesToBocage" type="terrainMap" fromValue="Hedge" toValue="Bocage" />
 		<LOSSSRule name="LightWoods" type="terrainMap" fromValue="Woods" toValue="Light Woods" />
+		<LOSSSRule name="PineWoods" type="terrainMap" fromValue="Woods" toValue="Pine Woods" />
         <!-- too many problems around roads to reliably change terrain
         <LOSSSRule name="OrchardsToShellholes" type="terrainMap" fromValue="Orchard" toValue="Shellholes" />
         <LOSSSRule name="OrchardsToCrags" type="terrainMap" fromValue="Orchard" toValue="Crags" />
@@ -2490,7 +3173,9 @@
         <LOSSSRule name="MarshToBrush" type="terrainMap" fromValue="Marsh" toValue="Brush" />
         <LOSSSRule name="MarshToWoods" type="terrainMap" fromValue="Marsh" toValue="Woods" />
         <LOSSSRule name="MarshToGrain" type="terrainMap" fromValue="Marsh" toValue="Grain" />
-
+		<LOSSSRule name="MarshToWater" type="terrainToElevationMap" fromValue="Marsh" toValue="-1" />
+		<LOSSSRule name="Marsh0ToLevel1" type="terrainToElevationMap" fromValue="Marsh" toValue="1" />
+		<LOSSSRule name="Marsh0ToLevel_1" type="terrainToElevationMap" fromValue="Marsh" toValue="-1" />
         <LOSSSRule name="Level_1ToWoods" type="elevationToTerrainMap" fromValue="-1" toValue="Woods" />
         <LOSSSRule name="Level0ToWoods" type="elevationToTerrainMap" fromValue="0" toValue="Woods" />
         <LOSSSRule name="Level1ToWoods" type="elevationToTerrainMap" fromValue="1" toValue="Woods" />
@@ -2529,6 +3214,9 @@
 		<LOSSSRule name="StoneToGuttedFactory2.5" type="terrainMap" fromValue="Stone Factory, Level 2.5" toValue="Gutted Stone Factory, Level 2.5" />
 		<!-- custom mapping to convert Multiple Wooden Buildings to Huts -->
 		<LOSSSRule name="MultipleWoodtoHuts" type="terrainMap" fromValue="MultipleWooden" toValue="Huts" />
+		<!-- custom mapping to handle LFT AD transforms-->
+		<LOSSSRule name="OrchardsToDensePalm" type="terrainMap" fromValue="Orchard" toValue="Dense Jungle" />
+
     </LOSSSRules>
 
     <LOSCounterRules>
@@ -2558,9 +3246,11 @@
 		<terrainCounter name="Drift: 4 ca4" terrain="Hedge"/>
 		<terrainCounter name="Drift: 5 ca5" terrain="Hedge"/>
 		<terrainCounter name="Drift: 6 ca6" terrain="Hedge"/>
+		<terrainCounter name="PFZ open ground" terrain="Open Ground"/>
+		<terrainCounter name="PFZ vineyard" terrain="Vineyard"/>
 
 		<wreckCounter name="Wreck"/>
-                <wreckCounter name="Burnt Out Wreck"/>
+        <wreckCounter name="Burnt Out Wreck"/>
 
                 <OBACounter name="Red OBA FFE:1"/>
                 <OBACounter name="Red OBA FFE:2"/>

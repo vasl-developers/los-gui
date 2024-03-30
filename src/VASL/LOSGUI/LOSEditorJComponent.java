@@ -35,10 +35,7 @@ import java.awt.event.MouseMotionListener;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.zip.ZipEntry;
@@ -54,14 +51,19 @@ import VASL.LOS.Map.LOSResult;
 import VASL.LOS.Map.Location;
 import VASL.LOS.Map.Map;
 import VASL.LOS.Map.Terrain;
+import VASL.LOS.VASLGameInterface;
 import VASL.LOSGUI.Selection.BridgeSelection;
 import VASL.LOSGUI.Selection.HexSelection;
 import VASL.LOSGUI.Selection.HexsideSelection;
 import VASL.LOSGUI.Selection.RectangularSelection;
 import VASL.LOSGUI.Selection.RotatedRectangularSelection;
 import VASL.LOSGUI.Selection.Selection;
+import VASL.build.module.ASLMap;
 import VASL.build.module.map.boardArchive.BoardArchive;
 import VASL.build.module.map.boardArchive.SharedBoardMetadata;
+import VASSAL.tools.DataArchive;
+
+import static VASSAL.build.GameModule.getGameModule;
 
 /**
  * Title:        LOSEditorJComponent.java
@@ -133,6 +135,10 @@ public class LOSEditorJComponent
     // ZIP file archive stuff
     private ZipFile archive;
     private SharedBoardMetadata sharedBoardMetadata;
+    private VASLGameInterface vaslGameInterface;
+    private VASL.LOS.Map.Map LOSMap;
+
+    protected DataArchive dataArchive;
 
     private boolean doingLOS;
     private int targetX;
@@ -195,17 +201,16 @@ public class LOSEditorJComponent
     }
 
     /**
-     * Reads the terrain types metadata from the LOS archive
+     * Reads the metadata from the SharedBoardMetadata.xml file in the VASL version being used
      */
-    public void loadSharedBoardMetadata()throws IOException {
+    public void loadSharedBoardMetadata() throws IOException {
 
-        // parse the board metadata
         sharedBoardMetadata = new SharedBoardMetadata();
         try {
-
-            // read the shared metadata file in the LOS archive and set the terrain types
-            sharedBoardMetadata.parseSharedBoardMetadataFile(archive.getInputStream(archive.getEntry(sharedBoardMetadataFileName)));
-
+            // read the shared metadata file in the VASL dist folder and set the terrain types
+            String sBMdFN = LOSEditorProperties.getShardBoardMetadataFileName();
+            InputStream inputStream = new FileInputStream(sBMdFN);
+            sharedBoardMetadata.parseSharedBoardMetadataFile(inputStream);
         } catch (Exception e) {
 
             throw new IOException("Unable to read the shared board metadata from the LOS archive",e);
@@ -884,7 +889,8 @@ public class LOSEditorJComponent
                 targetX = (int) LOSPoint.getX();
                 targetY = (int) LOSPoint.getY();
 
-                map.LOS(sourceLocation, useAuxSourceLOSPoint, targetLocation, useAuxTargetLOSPoint, result, null);
+                vaslGameInterface = new VASLGameInterface(null, null);
+                map.LOS(sourceLocation, useAuxSourceLOSPoint, targetLocation, useAuxTargetLOSPoint, result, vaslGameInterface);
 
                 if (result.isBlocked()) {
                     frame.setStatusBarText(
