@@ -16,8 +16,19 @@
  */
 package VASL.LOSGUI;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 import java.util.Properties;
+
+import static VASL.LOSGUI.LOSEditorApp.writeError;
 
 /**
  * Title:        LOSEditorProperties.java
@@ -29,53 +40,27 @@ import java.util.Properties;
 public class LOSEditorProperties {
 
     // properties
-    private static String LOSEditorHome;
     private static String BoardDirectory;
-    private static String ShardBoardMetadataFileName;
-    private static boolean loaded = false;
 
-    // getters
-    public static String getLOSEditorHome() {
 
-        if (!loaded) load();
+    static {
+        try {
+            // Get the URL of the JAR file
+            URL jarUrl = LOSEditorProperties.class.getProtectionDomain().getCodeSource().getLocation();
+            if (jarUrl == null) {
+                throw new IOException("Unable to determine JAR file location");
+            }
 
-        return LOSEditorHome;
+            // Construct the path to the bdFiles directory
+            File jarFile = new File(jarUrl.toURI());
+            File bdFilesDir = new File(jarFile.getParentFile(), "classes/bdFiles");
+            BoardDirectory = bdFilesDir.getAbsolutePath();
+        } catch (IOException | URISyntaxException e) {
+            writeError("Unable to load boards directory from resources: " + e.getMessage());
+        }
     }
 
     public static String getBoardDirectory() {
-
-        if (!loaded) load();
-
         return BoardDirectory;
-    }
-    public static String getShardBoardMetadataFileName() {
-
-        if (!loaded) load();
-
-        return ShardBoardMetadataFileName;
-    }
-    public LOSEditorProperties() {
-    }
-
-    private static void load() {
-
-        // try to read the file
-        try {
-
-            Properties props = new Properties();
-            FileInputStream in = new FileInputStream("LOSEditor.properties");
-
-            // load the properties
-            props.load(in);
-            LOSEditorHome = props.getProperty("LOSEditorHome");
-            BoardDirectory =props.getProperty("BoardDirectory");
-            ShardBoardMetadataFileName = props.getProperty("SharedBoardMetadataFileName");
-
-            loaded = true;
-
-        } catch (Exception e) {
-
-        }
-
     }
 }

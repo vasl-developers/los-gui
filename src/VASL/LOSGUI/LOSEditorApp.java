@@ -64,12 +64,7 @@ public class LOSEditorApp {
             e.printStackTrace();
         }
 
-        // read the LOS properties file, quit if there's a problem
-        if (LOSEditorProperties.getLOSEditorHome() == null) {
 
-            writeError("Cannot read the properties file LOSEditorApp.properties");
-            System.exit(0);
-        }
 
         // map name provided?
         if (args.length == 1) {
