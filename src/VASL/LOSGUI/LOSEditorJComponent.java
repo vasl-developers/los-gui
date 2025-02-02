@@ -183,20 +183,29 @@ public class LOSEditorJComponent
         addKeyListener(this);
 
         // set up the image archive
-        final String archiveName = LOSEditorProperties.getLOSEditorHome() + System.getProperty("file.separator", "\\") + "LOSEditorData.zip";
-        // archiveName = "\"" + archiveName + "\"";
-        try {
-
-            archive = new ZipFile(archiveName);
-
+        try (InputStream inputStream = LOSEditorProperties.class.getClassLoader().getResourceAsStream("LOSEditorData.zip")) {
+            if (inputStream == null) {
+                System.err.println("Cannot find the archive file LOSEditorData.zip in the resources folder");
+                System.exit(1);
+            }
+            File tempFile = File.createTempFile("LOSEditorData", ".zip");
+            tempFile.deleteOnExit();
+            try (OutputStream outStream = new FileOutputStream(tempFile)) {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outStream.write(buffer, 0, bytesRead);
+                }
+            }
+            archive = new ZipFile(tempFile);
         } catch (IOException e) {
-
-            System.err.println("Cannot read the archive file " + archiveName);
-            System.err.println("Exiting...");
+            System.err.println("Cannot read the archive file LOSEditorData.zip");
+            e.printStackTrace();
             System.exit(1);
         }
 
         // read the shared metadata file
+        LOSEditorApp.writeError("Reading the LOSEditorData.zip file");
         loadSharedBoardMetadata();
     }
 
@@ -207,13 +216,16 @@ public class LOSEditorJComponent
 
         sharedBoardMetadata = new SharedBoardMetadata();
         try {
-            // read the shared metadata file in the VASL dist folder and set the terrain types
-            String sBMdFN = LOSEditorProperties.getShardBoardMetadataFileName();
-            InputStream inputStream = new FileInputStream(sBMdFN);
+            // read the shared metadata file from the resources folder and set the terrain types
+            String sBMdFN = "SharedBoardMetadata.xml";
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(sBMdFN);
+            if (inputStream == null) {
+                throw new IOException("File not found in resources: " + sBMdFN);
+            }
+            LOSEditorApp.writeError("Reading the shared board metadata file");
             sharedBoardMetadata.parseSharedBoardMetadataFile(inputStream);
         } catch (Exception e) {
-
-            throw new IOException("Unable to read the shared board metadata from the LOS archive",e);
+            throw new IOException("Unable to read the shared board metadata from the resources folder", e);
         }
     }
 
@@ -357,7 +369,7 @@ public class LOSEditorJComponent
             final int spacing = 20;
 
             // set level color
-            switch (sourceLocation.getBaseHeight() + sourceLocation.getHex().getBaseHeight()) {
+            switch (sourceLocation.getHex().getBaseLevelofHex() + sourceLocation.getHex().getBaseLevelofHex()) {
 
                 case -1:
                 case -2:
@@ -378,7 +390,7 @@ public class LOSEditorJComponent
 
             // draw the source location level
             screen2D.drawString(
-                    "Level " + (sourceLocation.getBaseHeight() + sourceLocation.getHex().getBaseHeight()),
+                    "Level " + (sourceLocation.getHex().getBaseLevelofHex() + sourceLocation.getHex().getBaseLevelofHex()),
                     (int) sourceLocation.getLOSPoint().getX() - spacing / 2,
                     (int) sourceLocation.getLOSPoint().getY() + spacing / 2 + 15
             );
@@ -452,7 +464,7 @@ public class LOSEditorJComponent
                 // draw the target location level
                 screen2D.setColor(Color.red);
                 screen2D.drawString(
-                        "Level " + (targetLocation.getBaseHeight() + targetLocation.getHex().getBaseHeight()),
+                        "Level " + (targetLocation.getHex().getBaseLevelofHex() + targetLocation.getHex().getBaseLevelofHex()),
                         (int) targetLocation.getLOSPoint().getX() - spacing / 2,
                         (int) targetLocation.getLOSPoint().getY() + spacing / 2 + 15
                 );
@@ -610,24 +622,24 @@ public class LOSEditorJComponent
                     ));
                 }
             }
-            else if ("Add bridge".equals(currentFunctionName)) {
-
-                final Hex h = map.gridToHex(e.getX(), e.getY());
-                // remove?
-                if (currentTerrain == null) {
-
-                    allSelections.add(new HexSelection(h));
-                } else {
-                    allSelections.add(new BridgeSelection(new Bridge(
-                            currentBridge.getTerrain(),
-						customBridgeRoadElevation,
-                            currentBridge.getRotation(),
-                            currentBridge.getLocation(),
-                            currentBridge.isSingleHex(),
-                            currentBridge.getCenter()
-                    )));
-                }
-            }
+//            else if ("Add bridge".equals(currentFunctionName)) {
+//
+//                final Hex h = map.gridToHex(e.getX(), e.getY());
+//                // remove?
+//                if (currentTerrain == null) {
+//
+//                    allSelections.add(new HexSelection(h));
+//                } else {
+//                    allSelections.add(new BridgeSelection(new Bridge(
+//                            currentBridge.getTerrain(),
+//						customBridgeRoadElevation,
+//                            currentBridge.getRotation(),
+//                            currentBridge.getLocation(),
+//                            currentBridge.isSingleHex(),
+//                            currentBridge.getCenter()
+//                    )));
+//                }
+//            }
             else if ("Add road".equals(currentFunctionName)) {
 
                 final Location sourceLocation = map.gridToHex(e.getX(), e.getY()).getNearestLocation(e.getX(), e.getY());
@@ -636,7 +648,7 @@ public class LOSEditorJComponent
                 // only place elevated roads on level 0
                 if (!"Elevated Road".equals(hex.getCenterLocation().getTerrain().getName()) &&
 					"Elevated Road".equals(currentTerrain.getName()) &&
-                        hex.getBaseHeight() != 0)
+                        hex.getBaseLevelofHex() != 0)
                     return;
 
                 //ignore the center location
@@ -822,7 +834,7 @@ public class LOSEditorJComponent
         final String locationString = " | Location: " + " " + targetLocation.getName();
 
         final String heightString =
-                " - Height: " + (targetLocation.getHex().getBaseHeight() + targetLocation.getBaseHeight());
+                " - Height: " + (targetLocation.getHex().getBaseLevelofHex() + targetLocation.getHex().getBaseLevelofHex());
 
         String terrainString = " - Terrain:  " + targetLocation.getTerrain().getName();
 
@@ -1113,25 +1125,25 @@ public class LOSEditorJComponent
                 currentTerrain = t;
             }
 
-        } else if ("Add bridge".equals(currentFunctionName)) {
-
-
-            if ("Remove".equals(currentTerrainName)) {
-                currentTerrain = null;
-                currentBridge = null;
-            } else if ("Single Hex Wooden Bridge".equals(currentTerrainName)) {
-                currentTerrain = map.getTerrain("Single Hex Wooden Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
-            } else if ("Single Hex Stone Bridge".equals(currentTerrainName)) {
-                currentTerrain = map.getTerrain("Single Hex Stone Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
-            } else if ("Wooden Bridge".equals(currentTerrainName)) {
-                currentTerrain = map.getTerrain("Wooden Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
-            } else if ("Stone Bridge".equals(currentTerrainName)) {
-                currentTerrain = map.getTerrain("Stone Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
-            }
+//        } else if ("Add bridge".equals(currentFunctionName)) {
+//
+//
+//            if ("Remove".equals(currentTerrainName)) {
+//                currentTerrain = null;
+//                currentBridge = null;
+//            } else if ("Single Hex Wooden Bridge".equals(currentTerrainName)) {
+//                currentTerrain = map.getTerrain("Single Hex Wooden Bridge");
+//                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+//            } else if ("Single Hex Stone Bridge".equals(currentTerrainName)) {
+//                currentTerrain = map.getTerrain("Single Hex Stone Bridge");
+//                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+//            } else if ("Wooden Bridge".equals(currentTerrainName)) {
+//                currentTerrain = map.getTerrain("Wooden Bridge");
+//                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+//            } else if ("Stone Bridge".equals(currentTerrainName)) {
+//                currentTerrain = map.getTerrain("Stone Bridge");
+//                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+//            }
         } else if ("Add road".equals(currentFunctionName)) {
 
             if ("Dirt Road".equals(currentTerrainName)) {
