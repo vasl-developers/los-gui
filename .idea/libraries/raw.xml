@@ -1,0 +1,73 @@
+<component name="libraryTable">
+  <library name="raw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/distribution/raw/commons-io-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/logback-classic-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jmock-junit3-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-script.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-anim.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/smackx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/smack.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-awt-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-svg-dom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-transcoder.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/cglib-nodep-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/mockito-all-1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-xml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/bsh-core-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/xml-apis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/commons-compiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-svggen.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/junit-4.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jna-3.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/swing-worker-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/BrowserLauncher2-1_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-parser.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/swing-layout-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/TimingFramework-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-gui-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/logback-core-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/miglayout-core-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-gvt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jmock-legacy-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/miglayout-swing-4.2ju.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/slf4j-api-1.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/cglib-2.1_3-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/objenesis-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-extension.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/java-getopt-1.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/xml-apis-ext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-css.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/guava-r06.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/wizard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-codec.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/commons-codec-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/hamcrest-library-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jmock-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jmock-junit4-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jdom-2.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jmock-script-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/smackx-debug.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-bridge.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/swingx-0.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/Vengine.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-ext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/AppleJavaExtensions.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/batik-dom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/janino.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/jl1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/LOSEditorData.zip!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/platform-3.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/distribution/raw/xalan-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

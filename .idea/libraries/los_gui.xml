@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="los-gui">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/distribution/los-gui.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

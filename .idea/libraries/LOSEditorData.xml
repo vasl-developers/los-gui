@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LOSEditorData">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LOSEditorData.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
