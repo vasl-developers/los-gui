@@ -1,5 +1,6 @@
-package VASL.LOS;
+package VASL.LOSGUI;
 
+import VASL.LOS.LOSDataEditor;
 import VASL.LOS.Map.*;
 import VASL.build.module.map.boardArchive.SharedBoardMetadata;
 
@@ -348,8 +349,8 @@ public class GUILOSDataEditor extends LOSDataEditor {
         Hex currentHex = null;
         int heightadj=0;
         for (int x = 0; x < map.getWidth(); x++) {
-            // add 1 hex if odd col on all maps except those like RO which have equal rows in every col
-            if(!map.getMapConfiguration().equals(("TopLeftHalfHeightEqualRowCount"))){heightadj = x % 2;}
+            // add 1 hex if odd col on all maps except those like RO/DaE which have equal rows in every col
+            if(!map.getMapConfiguration().contains(("EqualRowCount"))){heightadj = x % 2;}
             for (int y = 0; y < map.getHeight() + heightadj; y++) {
                 currentHex = map.getHex(x, y);
                 for (int z = 0; z < 6; z++) {
@@ -500,7 +501,7 @@ public class GUILOSDataEditor extends LOSDataEditor {
                     // hex being set to depression terrain?
                     if (!center.isDepressionTerrain()) {
 
-                        currentHex.setBaseHeight(map.getGridElevation(
+                        currentHex.setBaseLevelofHex(map.getGridElevation(
                                 (int) center.getLOSPoint().getX(),
                                 (int) center.getLOSPoint().getY()));
 
@@ -527,17 +528,17 @@ public class GUILOSDataEditor extends LOSDataEditor {
                                                 (int) currentHex.getHexsideLocation(x).getEdgeCenterPoint().getX(),
                                                 (int) currentHex.getHexsideLocation(x).getEdgeCenterPoint().getY())
                                         ) {
-                                    currentHex.getHexsideLocation(x).setBaseHeight(0);
+                                    currentHex.getHexsideLocation(x).setLevelInHex(0);
                                     currentHex.getHexsideLocation(x).setDepressionTerrain(terr);
                                 } else {
                                     // non-depression hexside locations are one level higher
-                                    currentHex.getHexsideLocation(x).setBaseHeight(1);
+                                    currentHex.getHexsideLocation(x).setLevelInHex(1);
                                 }
                             }
                         }
                     }
                 } else {
-                    currentHex.setBaseHeight(newLevel);
+                    currentHex.setBaseLevelofHex(newLevel);
                 }
 
                 // update the depression terrain for the hex
@@ -553,7 +554,7 @@ public class GUILOSDataEditor extends LOSDataEditor {
 
                         // if center is depression, ensure base level is reset
                         if (center.isDepressionTerrain()) {
-                            currentHex.getHexsideLocation(x).setBaseHeight(0);
+                            currentHex.getHexsideLocation(x).setLevelInHex(0);
                         }
                     }
                 }

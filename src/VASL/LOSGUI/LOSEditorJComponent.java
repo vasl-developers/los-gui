@@ -27,11 +27,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
@@ -44,7 +40,7 @@ import java.util.zip.ZipFile;
 import javax.swing.JComponent;
 import javax.swing.Scrollable;
 
-import VASL.LOS.GUILOSDataEditor;
+import VASL.LOSGUI.GUILOSDataEditor;
 import VASL.LOS.Map.Bridge;
 import VASL.LOS.Map.Hex;
 import VASL.LOS.Map.LOSResult;
@@ -64,6 +60,7 @@ import VASL.build.module.map.boardArchive.SharedBoardMetadata;
 import VASSAL.tools.DataArchive;
 
 import static VASSAL.build.GameModule.getGameModule;
+import org.jdom2.JDOMException;
 
 /**
  * Title:        LOSEditorJComponent.java
@@ -357,7 +354,7 @@ public class LOSEditorJComponent
             final int spacing = 20;
 
             // set level color
-            switch (sourceLocation.getBaseHeight() + sourceLocation.getHex().getBaseHeight()) {
+            switch (sourceLocation.getAbsoluteHeight()){    //BaseHeight() + sourceLocation.getHex().getBaseHeight()) {
 
                 case -1:
                 case -2:
@@ -378,7 +375,8 @@ public class LOSEditorJComponent
 
             // draw the source location level
             screen2D.drawString(
-                    "Level " + (sourceLocation.getBaseHeight() + sourceLocation.getHex().getBaseHeight()),
+                    //"Level " + (sourceLocation.getBaseHeight() + sourceLocation.getHex().getBaseHeight()),
+                    "Level " + (sourceLocation.getAbsoluteHeight()),
                     (int) sourceLocation.getLOSPoint().getX() - spacing / 2,
                     (int) sourceLocation.getLOSPoint().getY() + spacing / 2 + 15
             );
@@ -452,7 +450,8 @@ public class LOSEditorJComponent
                 // draw the target location level
                 screen2D.setColor(Color.red);
                 screen2D.drawString(
-                        "Level " + (targetLocation.getBaseHeight() + targetLocation.getHex().getBaseHeight()),
+                        //"Level " + (targetLocation.getBaseHeight() + targetLocation.getHex().getBaseHeight()),
+                        "Level " + (targetLocation.getAbsoluteHeight()),
                         (int) targetLocation.getLOSPoint().getX() - spacing / 2,
                         (int) targetLocation.getLOSPoint().getY() + spacing / 2 + 15
                 );
@@ -620,8 +619,7 @@ public class LOSEditorJComponent
                 } else {
                     allSelections.add(new BridgeSelection(new Bridge(
                             currentBridge.getTerrain(),
-						customBridgeRoadElevation,
-                            currentBridge.getRotation(),
+						    currentBridge.getRotation(),
                             currentBridge.getLocation(),
                             currentBridge.isSingleHex(),
                             currentBridge.getCenter()
@@ -636,7 +634,7 @@ public class LOSEditorJComponent
                 // only place elevated roads on level 0
                 if (!"Elevated Road".equals(hex.getCenterLocation().getTerrain().getName()) &&
 					"Elevated Road".equals(currentTerrain.getName()) &&
-                        hex.getBaseHeight() != 0)
+                        hex.getBaseLevelofHex() != 0)
                     return;
 
                 //ignore the center location
@@ -822,7 +820,7 @@ public class LOSEditorJComponent
         final String locationString = " | Location: " + " " + targetLocation.getName();
 
         final String heightString =
-                " - Height: " + (targetLocation.getHex().getBaseHeight() + targetLocation.getBaseHeight());
+                " - Height: " + (targetLocation.getAbsoluteHeight());
 
         String terrainString = " - Terrain:  " + targetLocation.getTerrain().getName();
 
@@ -1121,16 +1119,16 @@ public class LOSEditorJComponent
                 currentBridge = null;
             } else if ("Single Hex Wooden Bridge".equals(currentTerrainName)) {
                 currentTerrain = map.getTerrain("Single Hex Wooden Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+                currentBridge = new Bridge(currentTerrain, rotation, null, true);
             } else if ("Single Hex Stone Bridge".equals(currentTerrainName)) {
                 currentTerrain = map.getTerrain("Single Hex Stone Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+                currentBridge = new Bridge(currentTerrain, rotation, null, true);
             } else if ("Wooden Bridge".equals(currentTerrainName)) {
                 currentTerrain = map.getTerrain("Wooden Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+                currentBridge = new Bridge(currentTerrain, rotation, null, true);
             } else if ("Stone Bridge".equals(currentTerrainName)) {
                 currentTerrain = map.getTerrain("Stone Bridge");
-                currentBridge = new Bridge(currentTerrain, customBridgeRoadElevation, rotation, null, true);
+                currentBridge = new Bridge(currentTerrain, rotation, null, true);
             }
         } else if ("Add road".equals(currentFunctionName)) {
 
@@ -1685,7 +1683,7 @@ public class LOSEditorJComponent
     public void keyPressed(KeyEvent e) {
 
         final int code = e.getKeyCode();
-        final String modifiers = KeyEvent.getKeyModifiersText(e.getModifiers());
+        final String modifiers = InputEvent.getModifiersExText(e.getModifiersEx());
 
         // is the map open?
         if (!mapOpen) return;

@@ -34,7 +34,7 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 
-import VASL.LOS.GUILOSDataEditor;
+import VASL.LOSGUI.GUILOSDataEditor;
 
 import VASL.LOS.Map.Map;
 
@@ -48,6 +48,7 @@ import VASL.LOS.Map.Map;
 public class LOSEditorJFrame extends JFrame {
     // directories
     private String boardDirectory;
+
 
     // combo boxes
     private String[] functionList = {
