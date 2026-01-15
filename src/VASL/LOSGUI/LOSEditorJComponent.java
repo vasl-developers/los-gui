@@ -259,7 +259,7 @@ public class LOSEditorJComponent
             }
 
             // find the terrain
-            final Terrain t = losDataEditor.getMap().getTerrain(terrainName);
+            final Terrain t = losDataEditor.getSharedBoardMetadata().getTerrainTypes().get(terrainName);
             if (t == null) {
 
                 LOSEditorApp.writeError("Line " + (current + 1) + ": Terrain not found - " + terrainName);
