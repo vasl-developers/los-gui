@@ -32,14 +32,17 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 import javax.swing.JComponent;
 import javax.swing.Scrollable;
 
+import VASL.LOS.LOS;
 import VASL.LOSGUI.GUILOSDataEditor;
 import VASL.LOS.Map.Bridge;
 import VASL.LOS.Map.Hex;
@@ -56,6 +59,7 @@ import VASL.LOSGUI.Selection.RotatedRectangularSelection;
 import VASL.LOSGUI.Selection.Selection;
 import VASL.build.module.ASLMap;
 import VASL.build.module.map.boardArchive.BoardArchive;
+import VASL.build.module.map.boardArchive.BoardMetadata;
 import VASL.build.module.map.boardArchive.SharedBoardMetadata;
 import VASSAL.tools.DataArchive;
 
@@ -79,8 +83,9 @@ public class LOSEditorJComponent
     // status variables
     private boolean mapChanged;
     private boolean mapOpen;
-
+    private String qualifiedBoardArchive;
     private static final String sharedBoardMetadataFileName = "SharedBoardMetadata.xml"; // name of the shared board metadata file
+    private static final String LOSDataFileName = "LOSData";    // name of the LOS data file in archive
 
     // the map editor
     public GUILOSDataEditor losDataEditor;
@@ -134,6 +139,7 @@ public class LOSEditorJComponent
     private SharedBoardMetadata sharedBoardMetadata;
     private VASLGameInterface vaslGameInterface;
     private VASL.LOS.Map.Map LOSMap;
+    private BoardMetadata metadata;
 
     protected DataArchive dataArchive;
 
@@ -1561,8 +1567,10 @@ public class LOSEditorJComponent
     public void createNewMap() {
 
         // create the map
-        frame.setStatusBarText("This option is not currently supported. Open an existing board. ");
-        frame.paintImmediately();
+        //frame.setStatusBarText("This option is not currently supported. Open an existing board. ");
+        //frame.paintImmediately();
+        losDataEditor.createLOSData();
+        LOSMap = losDataEditor.getMap();
     }
 
     public void saveLOSData() {
@@ -1581,14 +1589,14 @@ public class LOSEditorJComponent
         // create the map image
         frame.setStatusBarText("Creating the map image...");
         frame.paintImmediately();
-        mapImage = new BufferedImage(losDataEditor.getMap().getGridWidth(), losDataEditor.getMap().getGridHeight(), BufferedImage.TYPE_3BYTE_BGR);
+        mapImage = new BufferedImage(LOSMap.getGridWidth(), LOSMap.getGridHeight(), BufferedImage.TYPE_3BYTE_BGR);
         paintMapImage();
         frame.setStatusBarText("  ");
         adjustMapViewSize();
         mapOpen = true;
         mapChanged = false;
         frame.setStatusBarText("  ");
-        sourceLocation = losDataEditor.getMap().getHex(losDataEditor.getMap().getWidth() / 2, 1).getCenterLocation();
+        sourceLocation = LOSMap.getHex(LOSMap.getWidth() / 2, 1).getCenterLocation();
         targetLocation = sourceLocation;
 
     }
@@ -1614,13 +1622,107 @@ public class LOSEditorJComponent
 
         // try to open LOS data
         frame.setStatusBarText("Reading or creating the LOS data...");
-        losDataEditor.readLOSData();
+        readLOSData();
 
         // create an empty geo board if no LOS data - for now
-        if(losDataEditor.getMap() == null) {
+        if(LOSMap == null) {
             createNewMap();
+            losDataEditor.setMap(LOSMap);
+        }
+        else {
+            losDataEditor.setMap(LOSMap);
         }
         openMap();
+    }
+
+    /**
+     * Reads the map from disk using terrain types read from the board archive
+     * Use only for losgui
+     * @return <code>Map</code> object. Null if the LOS data does not exist or an error occurred.
+     */
+    public Map readLOSData(){
+         //losDataEditor.readLOSData();
+         //return losDataEditor.getMap();
+        return getLOSData();
+
+    }
+
+    /**
+     * Reads the map from disk using the provide terrain types.
+     * @return <code>Map</code> object. Null if the LOS data does not exist or an error occurred.
+     */
+    public Map getLOSData(){
+
+        qualifiedBoardArchive = losDataEditor.getQualifiedBoardArchive();
+        BoardArchive boardArchive = losDataEditor.getboardArchive();
+        metadata = boardArchive.getMetadata();
+        try (ZipFile archive = new ZipFile(qualifiedBoardArchive)) {  //open the LOSData file of the board
+            try (ObjectInputStream infile = new ObjectInputStream(
+                    new BufferedInputStream(
+                            new GZIPInputStream(
+                                    boardArchive.getInputStreamForArchiveFile(archive, LOSDataFileName))))) {
+
+                // read the board-level data
+                final int widthInHexes = infile.readInt();
+                final int heightInHexes = infile.readInt();
+                final int gridWidth = infile.readInt();
+                final int gridHeight = infile.readInt();
+                if (boardArchive.isGEO()) {
+                    LOSMap = new Map(widthInHexes, heightInHexes, losDataEditor.getSharedBoardMetadata().getTerrainTypes(), "", "", false); // passboardgridconfig, passcropgridconfig, isCropping);
+                } else {
+                    LOSMap = new Map(metadata.getHexWidth(), metadata.getHexHeight(), widthInHexes, heightInHexes, metadata.getA1CenterX(), metadata.getA1CenterY(), gridWidth, gridHeight, losDataEditor.getSharedBoardMetadata().getTerrainTypes(), "", "", false); //passboardgridconfig, passcropgridconfig, isCropping);
+                }
+
+                // read the terrain and elevations grids
+                for (int x = 0; x < gridWidth; x++) {
+                    for (int y = 0; y < gridHeight; y++) {
+                        LOSMap.setGridElevation((int) infile.readByte(), x, y);
+                        LOSMap.setGridTerrainCode((int) infile.readByte() & (0xff), x, y);
+                    }
+                }
+
+                // code added to enable rr embankments in RB and Partial Orchards
+                // set the rr embankments
+                LOSMap.setRBrrembankments(metadata.getRBrrembankments());
+                LOSMap.setPartialOrchards(metadata.getPartialOrchards());
+
+                // read the hex information
+                if(LOSMap.getMapConfiguration().contains("EqualRowCount") || LOSMap.getA1CenterY()==65) {
+                    for (int col = 0; col < LOSMap.getWidth(); col++) {
+                        for (int row = 0; row < LOSMap.getHeight(); row++) { // no extra hex for boards where each col has same number of rows (eg RO/DaE)
+                            final byte stairway = infile.readByte();
+                            if ((int) stairway == 1) {
+                                LOSMap.getHex(col, row).setStairway(true);
+                            } else {
+                                LOSMap.getHex(col, row).setStairway(false);
+                            }
+                        }
+                    }
+                } else {
+                    for (int col = 0; col < LOSMap.getWidth(); col++) {
+                        for (int row = 0; row < LOSMap.getHeight() + (col % 2); row++) {
+                            final byte stairway = infile.readByte();
+                            if ((int) stairway == 1) {
+                                LOSMap.getHex(col, row).setStairway(true);
+                            } else {
+                                LOSMap.getHex(col, row).setStairway(false);
+                            }
+                        }
+                    }
+                }
+
+                // code moved from before stairway loop to enable factory quasi-levels in stairway hexes
+                LOSMap.resetHexTerrain(0);
+
+                // set the slopes
+                LOSMap.setSlopes(metadata.getSlopes());
+            }
+        } catch(Exception e) {
+            frame.setStatusBarText("Could not read the LOS data in board " + qualifiedBoardArchive);
+            return null;
+        }
+
+        return LOSMap;
     }
 
     public void closeMap() {

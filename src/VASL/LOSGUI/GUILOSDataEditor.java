@@ -2,6 +2,7 @@ package VASL.LOSGUI;
 
 import VASL.LOS.LOSDataEditor;
 import VASL.LOS.Map.*;
+import VASL.build.module.map.boardArchive.BoardArchive;
 import VASL.build.module.map.boardArchive.SharedBoardMetadata;
 
 import java.awt.*;
@@ -84,7 +85,6 @@ public class GUILOSDataEditor extends LOSDataEditor {
             for (int j = Math.max(y, 0); j < Math.min(y + height + 1, map.getGridHeight() - 1); j++) {
 
                  currentHex = map.gridToHex(i, j);
-                // code change DR April 2016, trapped exception if currentHex = null
                 if (currentHex == null) {
                     terrType=0;
                 } else {
@@ -653,5 +653,12 @@ public class GUILOSDataEditor extends LOSDataEditor {
         if (terr.isFactoryTerrain()) {
             setFactoryWalls(rect, terr);
         }
+    }
+
+    protected BoardArchive getboardArchive(){
+        return boardArchive;
+    }
+    protected void setMap(VASL.LOS.Map.Map map){
+        this.map=map;
     }
 }
