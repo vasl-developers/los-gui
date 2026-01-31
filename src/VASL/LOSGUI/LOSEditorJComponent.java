@@ -186,7 +186,7 @@ public class LOSEditorJComponent
         addKeyListener(this);
 
         // set up the image archive
-        final String archiveName = LOSEditorProperties.getLOSEditorHome() + System.getProperty("file.separator", "\\") + "LOSEditorData.zip";
+        final String archiveName = LOSEditorProperties.getLOSEditorHome() + System.getProperty("file.separator", "\\") + "LOSEditorImages.zip";
         // archiveName = "\"" + archiveName + "\"";
         try {
 
@@ -1567,8 +1567,8 @@ public class LOSEditorJComponent
     public void createNewMap() {
 
         // create the map
-        //frame.setStatusBarText("This option is not currently supported. Open an existing board. ");
-        //frame.paintImmediately();
+        frame.setStatusBarText("Creating new LOSData ...");
+        frame.paintImmediately();
         losDataEditor.createLOSData();
         LOSMap = losDataEditor.getMap();
     }
@@ -1986,7 +1986,8 @@ public class LOSEditorJComponent
         }
     }
 
-    public void flipMap() {
+    //Disabled as not required when creating/editing LOSData
+    /*public void flipMap() {
 
         frame.setStatusBarText("Flipping the map...");
         frame.paintImmediately();
@@ -1996,7 +1997,7 @@ public class LOSEditorJComponent
         paintMapImage();
         mapChanged = true;
         frame.setStatusBarText("");
-    }
+    }*/
 
     /**
      * Used for debugging individual LOS

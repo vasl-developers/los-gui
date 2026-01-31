@@ -54,6 +54,16 @@ public class LOSEditorProperties {
 
         return ShardBoardMetadataFileName;
     }
+    public void setBoardDirectory(String boardDirectory) {
+        BoardDirectory = boardDirectory;
+    }
+    public void setShardBoardMetadataFileName(String shardBoardMetadataFileName) {
+        ShardBoardMetadataFileName = shardBoardMetadataFileName;
+    }
+    public void setLOSEditorHome(String losEditorHome) {
+        LOSEditorHome = losEditorHome;
+    }
+
     public LOSEditorProperties() {
     }
 

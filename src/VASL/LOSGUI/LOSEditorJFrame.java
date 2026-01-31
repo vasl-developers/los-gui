@@ -29,6 +29,9 @@ import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.File;
 import java.util.*;
 
 import javax.swing.*;
@@ -37,6 +40,8 @@ import javax.swing.event.ChangeEvent;
 import VASL.LOSGUI.GUILOSDataEditor;
 
 import VASL.LOS.Map.Map;
+import VASSAL.build.GameModule;
+import VASSAL.configure.DirectoryConfigurer;
 
 /**
  * Title:        LOSEditorJFrame.java
@@ -48,7 +53,10 @@ import VASL.LOS.Map.Map;
 public class LOSEditorJFrame extends JFrame {
     // directories
     private String boardDirectory;
-
+    private String sBMDfile;
+    public static final String BOARD_DIR = "boardURL";
+    private String sLOSfile;
+    private String sMapfile;
 
     // combo boxes
     private String[] functionList = {
@@ -154,12 +162,13 @@ public class LOSEditorJFrame extends JFrame {
 
         menuEditFlip.setPreferredSize(new Dimension(100, 20));
         menuEditFlip.setText("Flip");
-        menuEditFlip.addActionListener(new ActionListener() {
+        menuEditFlip.setEnabled(false);  //disabled this functionality as no need for it in LOSData creation/edit
+        /*menuEditFlip.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 editFlip();
             }
-        });
+        });*/
 
         menuHelp.setMargin(new Insets(0, 0, 0, 0));
         menuHelp.setText("Help");
@@ -505,7 +514,7 @@ public class LOSEditorJFrame extends JFrame {
         this.getContentPane().add(jScrollPane1, BorderLayout.CENTER);
         jScrollPane1.getViewport().add(losEditorJComponent, null);
 
-        boardDirectory = LOSEditorProperties.getBoardDirectory();
+        //boardDirectory = LOSEditorProperties.getBoardDirectory();
 
         // set the status bar
         setStatusBarText("  ");
@@ -518,6 +527,7 @@ public class LOSEditorJFrame extends JFrame {
 
         validate();
         requestFocus();
+        showPropertiesDialog();
     }
 
     //File | Exit action performed
@@ -554,10 +564,11 @@ public class LOSEditorJFrame extends JFrame {
         dlg.setVisible(true);
     }
 
-    public void editFlip() {
+    //Disabled as never needed when creating/editing losdata
+    /*public void editFlip() {
 
         losEditorJComponent.flipMap();
-    }
+    }*/
 
     //Overridden so we can exit on System Close
     protected void processWindowEvent(WindowEvent e) {
@@ -760,6 +771,23 @@ public class LOSEditorJFrame extends JFrame {
         }
         return false;
     }
+
+    private void showPropertiesDialog() {
+
+        PropertiesDialog dialog = new PropertiesDialog(this, "Set Properties", true);
+
+        //Center the dialog box
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension frameSize = dialog.getSize();
+        if (frameSize.height > screenSize.height) frameSize.height = screenSize.height;
+        if (frameSize.width > screenSize.width) frameSize.width = screenSize.width;
+        dialog.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
+        dialog.setVisible(true);
+
+
+        //sBMDfile = LOSEditorProperties.getShardBoardMetadataFileName();
+    }
+
 
     void setStatusBarText(String s) {
 

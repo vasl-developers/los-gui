@@ -16,6 +16,8 @@
  */
 package VASL.LOSGUI;
 
+import VASSAL.configure.DirectoryConfigurer;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -176,6 +178,9 @@ public class BridgeDialog extends JDialog {
 
     void heightTextField_actionPerformed(ActionEvent e) {
 
+    }
+
+    public void add(DirectoryConfigurer config) {
     }
 }
 
