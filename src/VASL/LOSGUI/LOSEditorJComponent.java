@@ -1605,12 +1605,13 @@ public class LOSEditorJComponent
      * Open a VASL archive for editing LOS data
      * @param archiveName fully qualified name of the board archive
      */
-    public void openArchive(String archiveName) {
+    public void openArchive(String archiveName, String pathname) {
 
         try {
             losDataEditor = new GUILOSDataEditor(
                     archiveName,
-                    LOSEditorProperties.getBoardDirectory(),
+                    pathname,
+                    //LOSEditorProperties.getBoardDirectory(),
                     sharedBoardMetadata);
         } catch (IOException e) {
             System.err.println("Cannot open the board archive: " + archiveName);

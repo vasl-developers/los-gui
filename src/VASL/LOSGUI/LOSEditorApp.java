@@ -39,11 +39,6 @@ public class LOSEditorApp {
         // set up the map editing frame
         LOSEditorJFrame frame = new LOSEditorJFrame();
 
-        // open the map
-        if (mapName != null) {
-
-            frame.openMap(mapName);
-        }
     }
 
     //Main method

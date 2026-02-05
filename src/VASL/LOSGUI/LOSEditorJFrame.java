@@ -527,7 +527,7 @@ public class LOSEditorJFrame extends JFrame {
 
         validate();
         requestFocus();
-        showPropertiesDialog();
+        //showPropertiesDialog();
     }
 
     //File | Exit action performed
@@ -634,12 +634,15 @@ public class LOSEditorJFrame extends JFrame {
     public void openMap() {
 
         // show the file chooser
-        JFileChooser fileChooser = new JFileChooser(LOSEditorProperties.getBoardDirectory());
+        //JFileChooser fileChooser = new JFileChooser(LOSEditorProperties.getBoardDirectory());
+        JFileChooser fileChooser = new JFileChooser();
+        //fileChooser.setCurrentDirectory(new java.io.File("/Users/dougr/ideaprojects/672b3/boards/bdFiles"));
+
         int selected = fileChooser.showOpenDialog(this);
 
         if (selected == JFileChooser.APPROVE_OPTION) {
 
-            openMap(fileChooser.getSelectedFile().getName());
+            openMap(fileChooser.getSelectedFile().getName(), fileChooser.getSelectedFile().getParent());
         }
     }
 
@@ -647,13 +650,13 @@ public class LOSEditorJFrame extends JFrame {
      * Open given map
      * @param mapName the map name
      */
-    public void openMap(String mapName){
+    public void openMap(String mapName, String dir){  // String or File?
 
         // abort if user chooses not to close the current map
         if (!closeArchive()) return;
 
         try {
-            losEditorJComponent.openArchive(mapName);
+            losEditorJComponent.openArchive(mapName, dir);  //, pathname);
         } catch (Exception e) {
 
             setStatusBarText("Cannot open the board archive " + losEditorJComponent.getArchiveName());
