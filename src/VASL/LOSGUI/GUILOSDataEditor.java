@@ -348,9 +348,14 @@ public class GUILOSDataEditor extends LOSDataEditor {
 
         Hex currentHex = null;
         int heightadj=0;
-        for (int x = 0; x < map.getWidth(); x++) {
+        Hex[][] hexGrid = map.getHexGrid();
+
+        boolean equalrowcount = hexGrid[0].length == hexGrid[1].length ? true : false;
+
+            for (int x = 0; x < map.getWidth(); x++) {
             // add 1 hex if odd col on all maps except those like RO/DaE which have equal rows in every col
-            if(!map.getMapConfiguration().contains(("EqualRowCount"))){heightadj = x % 2;}
+            //if(!map.getMapConfiguration().contains(("EqualRowCount"))){heightadj = x % 2;}
+            heightadj = equalrowcount == true ? 0 : x % 2;
             for (int y = 0; y < map.getHeight() + heightadj; y++) {
                 currentHex = map.getHex(x, y);
                 for (int z = 0; z < 6; z++) {

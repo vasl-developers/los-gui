@@ -659,7 +659,7 @@ public class LOSEditorJFrame extends JFrame {
             losEditorJComponent.openArchive(mapName, dir);  //, pathname);
         } catch (Exception e) {
 
-            setStatusBarText("Cannot open the board archive " + losEditorJComponent.getArchiveName());
+            setStatusBarText("Cannot open the board archive " + mapName); //losEditorJComponent.getArchiveName());
             e.printStackTrace(System.err);
             return;
         }
