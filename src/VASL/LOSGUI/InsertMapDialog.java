@@ -114,8 +114,8 @@ public class InsertMapDialog extends JDialog {
         String upperLeft = upperLeftTextField.getText();
 
         // create a  map
-        frame.insertMap(LOSDataEditor.getMap(), upperLeft);
-        dispose();
+        //frame.insertMap(LOSDataEditor.getMap(), upperLeft);
+        //dispose();
     }
 
     // Cancel

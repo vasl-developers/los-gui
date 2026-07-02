@@ -160,16 +160,6 @@ public class LOSEditorJFrame extends JFrame {
         menuEdit.setFont(new java.awt.Font("Dialog", 0, 11));
         menuEdit.setEnabled(false);
 
-        menuEditFlip.setPreferredSize(new Dimension(100, 20));
-        menuEditFlip.setText("Flip");
-        menuEditFlip.setEnabled(false);  //disabled this functionality as no need for it in LOSData creation/edit
-        /*menuEditFlip.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-                editFlip();
-            }
-        });*/
-
         menuHelp.setMargin(new Insets(0, 0, 0, 0));
         menuHelp.setText("Help");
         menuHelp.setFont(new java.awt.Font("Dialog", 0, 11));
@@ -256,7 +246,8 @@ public class LOSEditorJFrame extends JFrame {
         menuFilePrint.setMnemonic('0');
         menuFilePrint.setText("Print");
 
-        menuEditInsert.setPreferredSize(new Dimension(100, 20));
+        // don't insert maps into losgui
+        /*menuEditInsert.setPreferredSize(new Dimension(100, 20));
         menuEditInsert.setMnemonic('1');
         menuEditInsert.setText("Insert...");
         menuEditInsert.setEnabled(true);
@@ -265,7 +256,7 @@ public class LOSEditorJFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 insertMap();
             }
-        });
+        });*/
 
         buttonBar.setLayout(flowLayout1);
         functionSelector.setBorder(BorderFactory.createEtchedBorder());
@@ -688,7 +679,8 @@ public class LOSEditorJFrame extends JFrame {
         }
     }
 
-    public void insertMap() {
+    // don't need to insert a map into losgui
+    /*public void insertMap() {
 
         // create the file filter
         MapFileFilter filter = new MapFileFilter("map", "Map files");
@@ -707,7 +699,7 @@ public class LOSEditorJFrame extends JFrame {
             // trap errors
             try {
                 setStatusBarText("Opening map...");
-                //TODO: won't work - need to get the shared metadata
+                //won't work - need to get the shared metadata
                 GUILOSDataEditor tempMap = new GUILOSDataEditor(fileName, LOSEditorProperties.getBoardDirectory(), null);
 
                 // show the dialog
@@ -726,12 +718,13 @@ public class LOSEditorJFrame extends JFrame {
                 JOptionPane.showMessageDialog(null, "Cannot open the map: " + fileName, "File not found or invalid", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }
+    }*/
 
-    public void insertMap(Map insertMap, String upperLeft) {
+    // don't insert maps in losgui
+    /*public void insertMap(Map insertMap, String upperLeft) {
 
         losEditorJComponent.insertMap(insertMap, upperLeft);
-    }
+    }*/
 
     private void closeMapVariables() {
 

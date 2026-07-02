@@ -2071,7 +2071,8 @@ public class LOSEditorJComponent
         frame.paintImmediately();
     }
 
-    public void insertMap(Map insertMap, String upperLeftHex) {
+    //don't insert maps in losgui
+    /*public void insertMap(Map insertMap, String upperLeftHex) {
 
         if (losDataEditor.insertMap(insertMap, losDataEditor.getMap().getHex(upperLeftHex.toUpperCase()))) {
 
@@ -2082,7 +2083,7 @@ public class LOSEditorJComponent
             mapChanged = true;
             frame.setStatusBarText("");
         }
-    }
+    }*/
 
 }
 
