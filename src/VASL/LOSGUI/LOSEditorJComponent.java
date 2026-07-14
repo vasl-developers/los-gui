@@ -1713,7 +1713,7 @@ public class LOSEditorJComponent
                 }
 
                 // code moved from before stairway loop to enable factory quasi-levels in stairway hexes
-                LOSMap.resetHexTerrain(0);
+                LOSMap.resetHexTerrain();
 
                 // set the slopes
                 LOSMap.setSlopes(metadata.getSlopes());
@@ -1925,7 +1925,7 @@ public class LOSEditorJComponent
         }
 
         frame.setStatusBarText("Recreating the map image...");
-        losDataEditor.getMap().resetHexTerrain(0);
+        losDataEditor.getMap().resetHexTerrain();
         frame.paintImmediately();
         paintMapImage();
         frame.setStatusBarText("");
